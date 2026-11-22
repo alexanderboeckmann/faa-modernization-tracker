@@ -1,0 +1,961 @@
+{
+  "about": "Editorial estimates, not official ratings. Each criterion is scored 0 to 5 against its 'five' description; the index is the sum times 2. 2028 and 2032 are projections. For the US, 2028 assumes phase 1 lands on plan and 2032 assumes the $50.1B request is funded.",
+  "years": [
+    2007,
+    2012,
+    2016,
+    2020,
+    2024,
+    2026,
+    2028,
+    2032
+  ],
+  "criteria": [
+    {
+      "id": "auto",
+      "name": "Core automation",
+      "five": "Current-generation, trajectory-based en route and terminal platform, under 10 years old, one shared code base"
+    },
+    {
+      "id": "telecom",
+      "name": "Telecom backbone",
+      "five": "All-IP, fiber/wireless/satellite with diverse routing; no legacy TDM copper"
+    },
+    {
+      "id": "voice",
+      "name": "Voice communications",
+      "five": "IP voice switching and digital radios throughout; any frequency usable from any position"
+    },
+    {
+      "id": "datalink",
+      "name": "Controller-pilot data link",
+      "five": "CPDLC routine in en route and tower clearance, high equipage"
+    },
+    {
+      "id": "surv",
+      "name": "Surveillance",
+      "five": "Full ADS-B incl. space-based, MLAT and modern radar backup; no sensors past design life"
+    },
+    {
+      "id": "surface",
+      "name": "Surface and tower tools",
+      "five": "Surface surveillance at all major airports, electronic strips, digital/remote towers in use"
+    },
+    {
+      "id": "flow",
+      "name": "Flow management and TBO",
+      "five": "Network-wide AMAN/DMAN, collaborative flow management, trajectory-based operations live"
+    },
+    {
+      "id": "facility",
+      "name": "Facility age and condition",
+      "five": "Centers and towers inside design life with no deferred-maintenance backlog"
+    },
+    {
+      "id": "resil",
+      "name": "Resilience",
+      "five": "No multi-hour national outages; tested contingency centers; few unsustainable systems"
+    },
+    {
+      "id": "delivery",
+      "name": "Program delivery",
+      "five": "Projects land near baseline cost and schedule, with transparent public reporting"
+    }
+  ],
+  "countries": [
+    {
+      "id": "us",
+      "name": "United States",
+      "ansp": "FAA ATO",
+      "model": "Government agency, tax and trust-fund financed"
+    },
+    {
+      "id": "sg",
+      "name": "Singapore",
+      "ansp": "CAAS",
+      "model": "Statutory board"
+    },
+    {
+      "id": "jp",
+      "name": "Japan",
+      "ansp": "JCAB (MLIT)",
+      "model": "Government agency"
+    },
+    {
+      "id": "de",
+      "name": "Germany",
+      "ansp": "DFS",
+      "model": "State-owned company"
+    },
+    {
+      "id": "uk",
+      "name": "United Kingdom",
+      "ansp": "NATS",
+      "model": "Public-private partnership, user charges"
+    },
+    {
+      "id": "ca",
+      "name": "Canada",
+      "ansp": "NAV CANADA",
+      "model": "Private non-profit, user charges"
+    },
+    {
+      "id": "au",
+      "name": "Australia",
+      "ansp": "Airservices Australia",
+      "model": "Government corporation"
+    }
+  ],
+  "scores": {
+    "us": {
+      "auto": [
+        1.0,
+        1.5,
+        3.0,
+        3.0,
+        2.5,
+        2.5,
+        3.0,
+        4.0
+      ],
+      "telecom": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        1.5,
+        3.5,
+        5.0,
+        5.0
+      ],
+      "voice": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.0,
+        2.5,
+        4.5,
+        4.5
+      ],
+      "datalink": [
+        0.5,
+        0.5,
+        1.5,
+        2.5,
+        3.0,
+        3.5,
+        3.5,
+        4.0
+      ],
+      "surv": [
+        2.0,
+        2.5,
+        3.5,
+        4.0,
+        3.5,
+        3.5,
+        4.5,
+        4.5
+      ],
+      "surface": [
+        1.5,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        3.0,
+        4.0,
+        4.5
+      ],
+      "flow": [
+        3.0,
+        3.0,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        4.0
+      ],
+      "facility": [
+        2.0,
+        2.0,
+        1.5,
+        1.5,
+        1.0,
+        1.0,
+        1.5,
+        3.0
+      ],
+      "resil": [
+        2.5,
+        2.5,
+        2.5,
+        2.0,
+        1.5,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "delivery": [
+        2.0,
+        1.5,
+        2.0,
+        2.0,
+        1.5,
+        3.0,
+        3.0,
+        3.5
+      ]
+    },
+    "sg": {
+      "auto": [
+        2.5,
+        2.5,
+        4.5,
+        4.5,
+        4.0,
+        3.5,
+        3.5,
+        5.0
+      ],
+      "telecom": [
+        3.0,
+        3.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "voice": [
+        3.0,
+        3.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.5
+      ],
+      "datalink": [
+        2.0,
+        2.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        4.5
+      ],
+      "surv": [
+        3.0,
+        3.0,
+        4.0,
+        4.5,
+        4.5,
+        4.5,
+        4.5,
+        5.0
+      ],
+      "surface": [
+        2.5,
+        2.5,
+        3.0,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        4.5
+      ],
+      "flow": [
+        2.5,
+        2.5,
+        3.0,
+        3.5,
+        3.5,
+        3.5,
+        4.0,
+        4.5
+      ],
+      "facility": [
+        3.5,
+        3.5,
+        4.5,
+        4.5,
+        4.0,
+        4.0,
+        4.0,
+        4.5
+      ],
+      "resil": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.5
+      ],
+      "delivery": [
+        3.5,
+        3.5,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ]
+    },
+    "jp": {
+      "auto": [
+        2.5,
+        2.5,
+        2.5,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.5
+      ],
+      "telecom": [
+        3.0,
+        3.0,
+        3.5,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.5
+      ],
+      "voice": [
+        3.0,
+        3.0,
+        3.0,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        4.0
+      ],
+      "datalink": [
+        1.5,
+        1.5,
+        2.0,
+        3.0,
+        3.5,
+        3.5,
+        4.0,
+        4.5
+      ],
+      "surv": [
+        3.0,
+        3.0,
+        3.5,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.5
+      ],
+      "surface": [
+        2.5,
+        2.5,
+        3.0,
+        3.0,
+        3.0,
+        3.5,
+        3.5,
+        4.0
+      ],
+      "flow": [
+        3.0,
+        3.0,
+        3.0,
+        3.5,
+        3.5,
+        4.0,
+        4.0,
+        4.5
+      ],
+      "facility": [
+        3.0,
+        3.0,
+        3.0,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        4.0
+      ],
+      "resil": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "delivery": [
+        3.0,
+        3.0,
+        3.0,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5
+      ]
+    },
+    "de": {
+      "auto": [
+        3.0,
+        3.0,
+        4.0,
+        4.0,
+        4.0,
+        4.5,
+        4.5,
+        5.0
+      ],
+      "telecom": [
+        3.5,
+        3.5,
+        4.0,
+        4.0,
+        4.5,
+        4.5,
+        4.5,
+        5.0
+      ],
+      "voice": [
+        3.5,
+        3.5,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.5,
+        4.5
+      ],
+      "datalink": [
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        3.5,
+        4.0,
+        4.0,
+        4.5
+      ],
+      "surv": [
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        4.0,
+        4.5,
+        4.5
+      ],
+      "surface": [
+        3.0,
+        3.0,
+        3.5,
+        3.5,
+        4.0,
+        4.0,
+        4.0,
+        4.5
+      ],
+      "flow": [
+        3.0,
+        3.0,
+        3.5,
+        3.5,
+        3.5,
+        4.0,
+        4.0,
+        4.5
+      ],
+      "facility": [
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        4.0
+      ],
+      "resil": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.5
+      ],
+      "delivery": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.5,
+        3.5
+      ]
+    },
+    "uk": {
+      "auto": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        4.0
+      ],
+      "telecom": [
+        3.5,
+        3.5,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.5
+      ],
+      "voice": [
+        3.5,
+        3.5,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.5
+      ],
+      "datalink": [
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        4.0
+      ],
+      "surv": [
+        3.5,
+        3.5,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.5
+      ],
+      "surface": [
+        3.0,
+        3.0,
+        3.5,
+        3.5,
+        4.0,
+        4.0,
+        4.0,
+        4.5
+      ],
+      "flow": [
+        3.5,
+        3.5,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.5
+      ],
+      "facility": [
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.0,
+        3.0,
+        3.0,
+        3.5
+      ],
+      "resil": [
+        4.0,
+        4.0,
+        3.5,
+        3.5,
+        2.5,
+        2.0,
+        2.5,
+        3.5
+      ],
+      "delivery": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.5
+      ]
+    },
+    "ca": {
+      "auto": [
+        3.0,
+        3.0,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        4.0
+      ],
+      "telecom": [
+        3.0,
+        3.0,
+        3.5,
+        3.5,
+        4.0,
+        4.0,
+        4.0,
+        4.5
+      ],
+      "voice": [
+        3.0,
+        3.0,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        4.0
+      ],
+      "datalink": [
+        2.5,
+        2.5,
+        3.0,
+        3.5,
+        3.5,
+        3.5,
+        4.0,
+        4.5
+      ],
+      "surv": [
+        3.0,
+        3.5,
+        4.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "surface": [
+        2.5,
+        2.5,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.5,
+        4.0
+      ],
+      "flow": [
+        3.0,
+        3.0,
+        3.5,
+        3.5,
+        3.5,
+        4.0,
+        4.0,
+        4.5
+      ],
+      "facility": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.5
+      ],
+      "resil": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        3.5,
+        3.5,
+        4.0
+      ],
+      "delivery": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ]
+    },
+    "au": {
+      "auto": [
+        3.5,
+        3.0,
+        2.5,
+        2.0,
+        1.5,
+        1.5,
+        3.5,
+        4.5
+      ],
+      "telecom": [
+        3.0,
+        3.0,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        4.0,
+        4.5
+      ],
+      "voice": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.5,
+        4.0,
+        4.5
+      ],
+      "datalink": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.5,
+        4.5
+      ],
+      "surv": [
+        4.0,
+        4.5,
+        4.5,
+        4.5,
+        4.5,
+        4.5,
+        4.5,
+        5.0
+      ],
+      "surface": [
+        2.5,
+        2.5,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.5,
+        4.0
+      ],
+      "flow": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.5,
+        4.5
+      ],
+      "facility": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.5,
+        4.0,
+        4.0
+      ],
+      "resil": [
+        4.0,
+        4.0,
+        4.0,
+        3.5,
+        3.5,
+        3.0,
+        3.0,
+        4.0
+      ],
+      "delivery": [
+        3.0,
+        3.0,
+        2.5,
+        2.0,
+        1.5,
+        2.0,
+        2.5,
+        3.0
+      ]
+    }
+  },
+  "us2032Unfunded": {
+    "auto": 2.0,
+    "telecom": 5.0,
+    "voice": 4.5,
+    "datalink": 3.5,
+    "surv": 4.5,
+    "surface": 4.0,
+    "flow": 3.5,
+    "facility": 1.0,
+    "resil": 3.0,
+    "delivery": 2.5
+  },
+  "evidence": {
+    "us": [
+      {
+        "text": "HOST (1960s roots) replaced by ERAM at all 20 centers in 2015",
+        "src": "faa_nextgen_acc"
+      },
+      {
+        "text": "ADS-B nationwide by 2019; Data Comm en route at all 20 ARTCCs in 2025",
+        "src": "faa_nextgen"
+      },
+      {
+        "text": "2024: 51 of 138 systems unsustainable; copper lines unsupported by providers",
+        "src": "gao26"
+      },
+      {
+        "text": "BNATCS moved radio and voice-switch completion from 2037 to late 2028",
+        "src": "gao26"
+      },
+      {
+        "text": "As of Nov 2026: 71% of copper replaced, 230 of 450 voice switches, 16 of 612 radars",
+        "src": "modernskies"
+      },
+      {
+        "text": "En route centers 60 to 70 years old against a 50-year design life",
+        "src": "rollcall"
+      },
+      {
+        "text": "GAO: no reliable lifecycle cost estimate or integrated master schedule",
+        "src": "gao26"
+      }
+    ],
+    "sg": [
+      {
+        "text": "LORADS III (Thales TopSky) operational Oct 2013, planned for traffic to 2025",
+        "src": "icao_lorads"
+      },
+      {
+        "text": "Current system nearing end of life; NexGen ATMS due 2030, digital tower first operational 2030",
+        "src": "caas_2026"
+      },
+      {
+        "text": "S$4B upgrade program over 15 years",
+        "src": "caas_2026"
+      }
+    ],
+    "jp": [
+      {
+        "text": "Kobe ACC opened Oct 2018; new TEPS en route system Feb 2019",
+        "src": "jcab_kobe"
+      },
+      {
+        "text": "Upper/lower airspace split and four ACCs reduced to three, 2020 to 2025",
+        "src": "icao_jpn_reorg"
+      },
+      {
+        "text": "New ATC system optimized for CPDLC; VDL coverage expanding",
+        "src": "icao_jpn_cpdlc"
+      },
+      {
+        "text": "CARATS target year moved from 2025 to 2040",
+        "src": "carats2040"
+      }
+    ],
+    "de": [
+      {
+        "text": "iCAS live at Karlsruhe UAC for 5+ years by 2023; Munich switched Mar 2023",
+        "src": "dfs_munich"
+      },
+      {
+        "text": "Bremen preparing iCAS training in 2026; Langen to follow",
+        "src": "dfs_direct1"
+      },
+      {
+        "text": "Nationwide radar renewal contract awarded late 2022",
+        "src": "atm_icas2"
+      },
+      {
+        "text": "iFMP flow tool operational at Karlsruhe",
+        "src": "eurocontrol_ifmp"
+      }
+    ],
+    "uk": [
+      {
+        "text": "Aug 2023 flight-plan failure affected 700,000+ passengers",
+        "src": "caa_cap2993"
+      },
+      {
+        "text": "Jul 2025 radar fault at Swanwick; Sep 2026 flight processing failure hit ~2,000 flights",
+        "src": "aerocorner_nats"
+      },
+      {
+        "text": "CAA review of the Sep 2026 incident covers NATS plans to renew critical systems",
+        "src": "caa_2026"
+      }
+    ],
+    "ca": [
+      {
+        "text": "First ANSP to use space-based ADS-B in domestic airspace (from 2019)",
+        "src": "navcan_aireon"
+      },
+      {
+        "text": "AMAN at all area control centres; workforce pressures since the pandemic",
+        "src": "navcan_summer26"
+      },
+      {
+        "text": "TBO program, joined SESAR JU in 2026",
+        "src": "navcan_sesar"
+      }
+    ],
+    "au": [
+      {
+        "text": "OneSKY/CMATS contracts signed Feb 2018; varied 47 times by end of 2024",
+        "src": "anao_onesky"
+      },
+      {
+        "text": "CMATS go-live slated for Q3 2027; on the Projects of Concern list",
+        "src": "aa_poc"
+      },
+      {
+        "text": "CMATS voice system transitioned at first three locations",
+        "src": "airservices_voice"
+      }
+    ]
+  }
+}

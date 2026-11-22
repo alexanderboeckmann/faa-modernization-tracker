@@ -1,0 +1,58 @@
+name: Monthly FAA snapshot
+
+on:
+  schedule:
+    - cron: "23 14 17 * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Playwright
+        run: |
+          pip install playwright==1.48.0
+          python -m playwright install --with-deps chromium
+
+      - name: Self-test
+        run: |
+          python scripts/validate_data.py
+          python scripts/update_faa.py --bundle tests/fixture_bundle.js --dry-run || [ $? -eq 3 ]
+
+      - name: Pull tracker
+        id: pull
+        run: |
+          set +e
+          python scripts/update_faa.py
+          code=$?
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          if [ "$code" = "1" ]; then exit 1; fi
+          exit 0
+
+      - name: Commit new snapshot
+        if: steps.pull.outputs.code == '0'
+        run: |
+          git config user.name  "faa-tracker-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/faa_snapshots.json
+          git commit -m "Snapshot: FAA tracker $(python -c "import json;print(json.load(open('data/faa_snapshots.json'))['snapshots'][-1]['asOf'])")"
+          git push
+
+      - name: Open an issue if the scrape broke
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --title "Monthly FAA snapshot failed ($(date -u +%Y-%m-%d))" \
+            --body "The updater could not fetch or parse modernskies.faa.gov. Likely causes: the site changed its bundle layout, or bot protection blocked the runner. See run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

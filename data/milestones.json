@@ -1,0 +1,165 @@
+{
+  "milestones": [
+    {
+      "date": "2007-01-01",
+      "era": "NextGen",
+      "kind": "program",
+      "text": "NextGen implementation begins",
+      "src": "oig_travelweekly"
+    },
+    {
+      "date": "2008-12-15",
+      "era": "NextGen",
+      "kind": "audit",
+      "text": "OIG: 59% of ATC facilities older than 30 years (useful life 25 to 30)",
+      "src": "oig2008"
+    },
+    {
+      "date": "2009-12-17",
+      "era": "NextGen",
+      "kind": "deploy",
+      "text": "First ADS-B operations (Gulf, Houston Center)",
+      "src": "faa_nextgen_acc"
+    },
+    {
+      "date": "2014-06-30",
+      "era": "NextGen",
+      "kind": "deploy",
+      "text": "700+ ADS-B ground stations complete",
+      "src": "faa_nextgen_acc"
+    },
+    {
+      "date": "2015-03-31",
+      "era": "NextGen",
+      "kind": "deploy",
+      "text": "ERAM at all 20 ARTCCs, replacing HOST (1960s roots)",
+      "src": "faa_nextgen_acc"
+    },
+    {
+      "date": "2016-12-31",
+      "era": "NextGen",
+      "kind": "deploy",
+      "text": "Data Comm tower service at 55 airports",
+      "src": "faa_nextgen_acc"
+    },
+    {
+      "date": "2019-10-07",
+      "era": "NextGen",
+      "kind": "deploy",
+      "text": "ADS-B operational at all ATC facilities",
+      "src": "faa_nextgen_acc"
+    },
+    {
+      "date": "2020-01-01",
+      "era": "NextGen",
+      "kind": "rule",
+      "text": "ADS-B Out mandate takes effect",
+      "src": "faa_nextgen_acc"
+    },
+    {
+      "date": "2023-01-11",
+      "era": "NextGen",
+      "kind": "failure",
+      "text": "NOTAM system (30+ years old) fails",
+      "src": "gao26"
+    },
+    {
+      "date": "2024-09-23",
+      "era": "NextGen",
+      "kind": "audit",
+      "text": "GAO: 51 of 138 ATC systems unsustainable, 54 potentially",
+      "src": "gao26"
+    },
+    {
+      "date": "2024-09-30",
+      "era": "NextGen",
+      "kind": "deploy",
+      "text": "Data Comm en route at 16 centers; TFDM at 10 airports; first SAI",
+      "src": "faa_nextgen_fy"
+    },
+    {
+      "date": "2025-05-08",
+      "era": "BNATCS",
+      "kind": "program",
+      "text": "BNATCS announced",
+      "src": "hklaw"
+    },
+    {
+      "date": "2025-07-04",
+      "era": "BNATCS",
+      "kind": "funding",
+      "text": "$12.5B appropriated (OBBBA)",
+      "src": "hklaw"
+    },
+    {
+      "date": "2025-09-30",
+      "era": "BNATCS",
+      "kind": "deploy",
+      "text": "Data Comm en route at all 20 ARTCCs",
+      "src": "faa_nextgen"
+    },
+    {
+      "date": "2025-12-04",
+      "era": "BNATCS",
+      "kind": "program",
+      "text": "Peraton named prime integrator",
+      "src": "dot_integrator"
+    },
+    {
+      "date": "2026-01-05",
+      "era": "BNATCS",
+      "kind": "program",
+      "text": "Radar contracts to RTX and Indra (up to 612 radars)",
+      "src": "dot_radar"
+    },
+    {
+      "date": "2026-08-01",
+      "era": "BNATCS",
+      "kind": "program",
+      "text": "Reports: FAA weighing a smaller role for Peraton, about eight months after award (month approximate)",
+      "src": "avweb_peraton"
+    },
+    {
+      "date": "2026-09-22",
+      "era": "BNATCS",
+      "kind": "audit",
+      "text": "GAO: no reliable lifecycle cost estimate or master schedule",
+      "src": "gao26"
+    },
+    {
+      "date": "2026-11-17",
+      "era": "BNATCS",
+      "kind": "funding",
+      "text": "$50.1B full-funding request to Congress",
+      "src": "dot_501"
+    },
+    {
+      "date": "2027-08-31",
+      "era": "Planned",
+      "kind": "target",
+      "text": "SAI complete at 220 airports",
+      "src": "gao26"
+    },
+    {
+      "date": "2028-06-30",
+      "era": "Planned",
+      "kind": "target",
+      "text": "DOT target for 612 radars",
+      "src": "dot_radar"
+    },
+    {
+      "date": "2028-12-31",
+      "era": "Planned",
+      "kind": "target",
+      "text": "Phase 1 complete",
+      "src": "gao26"
+    },
+    {
+      "date": "2037-09-30",
+      "era": "Old plan",
+      "kind": "target",
+      "text": "Pre-BNATCS completion date for radios and voice switches",
+      "src": "gao26"
+    }
+  ]
+}

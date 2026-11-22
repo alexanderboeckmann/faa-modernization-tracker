@@ -1,0 +1,243 @@
+{
+  "appropriation": {
+    "total": 12.5,
+    "src": "flightglobal_obbba",
+    "lines": [
+      {
+        "label": "Telecommunications",
+        "billions": 4.75,
+        "units": 5170,
+        "unit": "network connections",
+        "program": "tdm-to-ip",
+        "per": "connection"
+      },
+      {
+        "label": "Radar replacement",
+        "billions": 3.0,
+        "units": 612,
+        "unit": "radars",
+        "program": "radar",
+        "per": "radar"
+      },
+      {
+        "label": "New consolidated ARTCC",
+        "billions": 1.9,
+        "units": 1,
+        "unit": "center",
+        "per": "center"
+      },
+      {
+        "label": "TRACON facilities",
+        "billions": 1.0
+      },
+      {
+        "label": "Runway safety and surface surveillance",
+        "billions": 0.5,
+        "units": 220,
+        "unit": "SAI sites",
+        "program": "sai",
+        "per": "site"
+      },
+      {
+        "label": "Unstaffed infrastructure",
+        "billions": 0.35,
+        "units": 140,
+        "unit": "sites",
+        "program": "uis",
+        "per": "site"
+      },
+      {
+        "label": "Enterprise information displays",
+        "billions": 0.3,
+        "units": 435,
+        "unit": "facilities",
+        "program": "e-ids",
+        "src": "skift_obbba",
+        "per": "facility"
+      },
+      {
+        "label": "Weather observation systems",
+        "billions": 0.08,
+        "src": "skift_obbba"
+      },
+      {
+        "label": "Alaska aviation safety",
+        "billions": 0.04,
+        "src": "skift_obbba"
+      },
+      {
+        "label": "Other (training, towers, research)",
+        "billions": 0.58,
+        "src": "hklaw",
+        "derived": true
+      }
+    ]
+  },
+  "spending": [
+    {
+      "label": "Obligated through Dec 31, 2025",
+      "billions": 1.6,
+      "src": "reuters_peraton"
+    },
+    {
+      "label": "Appropriated (Jul 2025)",
+      "billions": 12.5,
+      "src": "flightglobal_obbba"
+    },
+    {
+      "label": "FAA phase 1 estimate (Jun 2026)",
+      "billions": 10.615,
+      "src": "gao26"
+    },
+    {
+      "label": "Phase 2 estimate (unfunded)",
+      "billions": 10.2,
+      "src": "gao26"
+    },
+    {
+      "label": "Full-funding request (Nov 2026)",
+      "billions": 50.1,
+      "src": "dot_501"
+    }
+  ],
+  "contracts": [
+    {
+      "vendor": "Rohde & Schwarz USA",
+      "program": "IP voice switches (VoICE)",
+      "millions": 4900,
+      "ceiling": true,
+      "units": 462,
+      "unit": "switches",
+      "awarded": "2026-04",
+      "src": "rs_voice",
+      "note": "Ceiling value; includes production and support",
+      "noteSrc": "flying_voice"
+    },
+    {
+      "vendor": "Peraton",
+      "program": "Prime integrator",
+      "millions": 1500,
+      "awarded": "2025-12",
+      "src": "reuters_peraton",
+      "note": "Cost plus award fee; fees tied to schedule and quality. $200M negotiated off the initial price"
+    },
+    {
+      "vendor": "RTX (Collins) and Indra",
+      "program": "Radar System Replacement",
+      "millions": 1100,
+      "units": 612,
+      "unit": "radars",
+      "awarded": "2026-01",
+      "src": "reuters_peraton",
+      "note": "FAA total cost for 612 radars. Collins $438M, Indra $342M",
+      "noteSrc": "register_radar"
+    },
+    {
+      "vendor": "Leidos",
+      "program": "Enterprise Information Display System",
+      "millions": 292,
+      "units": 435,
+      "unit": "facilities",
+      "awarded": "2020-08",
+      "src": "leidos_eids",
+      "note": "Pre-BNATCS award, 4-year base plus 11 option years"
+    },
+    {
+      "vendor": "Indra",
+      "program": "NEXCOM v3 UHF/VHF radios",
+      "millions": 244.3,
+      "ceiling": true,
+      "awarded": "2025-11",
+      "src": "indra_radios",
+      "note": "Remote air/ground and backup emergency sites"
+    },
+    {
+      "vendor": "AT&T",
+      "program": "FAA Enterprise Network Services (telecom)",
+      "millions": 74.3,
+      "initial": true,
+      "awarded": "2026-08",
+      "src": "att_fens",
+      "note": "Initial task order only. Full contract expected to be multibillion over up to 15 years"
+    }
+  ],
+  "comparables": [
+    {
+      "group": "Core automation",
+      "country": "us",
+      "item": "ERAM en route automation (2005 estimate)",
+      "local": 2100,
+      "currency": "USD",
+      "src": "spectrum_eram",
+      "note": "Later ran $330M over budget and four years late",
+      "noteSrc": "planetizen_eram"
+    },
+    {
+      "group": "Core automation",
+      "country": "au",
+      "item": "CMATS acquisition contract (Thales)",
+      "local": 1205,
+      "currency": "AUD",
+      "src": "airservices_onesky",
+      "note": "Whole OneSKY program estimated at A$4.11B including support and contingency",
+      "noteSrc": "anao_onesky_2019"
+    },
+    {
+      "group": "Core automation",
+      "country": "sg",
+      "item": "LORADS III contract (Thales)",
+      "local": 145,
+      "currency": "EUR",
+      "src": "engineer_lorads"
+    },
+    {
+      "group": "Terminal automation",
+      "country": "us",
+      "item": "STARS terminal automation",
+      "local": 1700,
+      "currency": "USD",
+      "src": "avweb_stars",
+      "note": "Up from a $940M estimate"
+    },
+    {
+      "group": "Whole program",
+      "country": "us",
+      "item": "NextGen spending through FY2022",
+      "local": 14000,
+      "currency": "USD",
+      "src": "gao_nextgen_2023",
+      "note": "At least $35B projected through 2030, government and industry"
+    },
+    {
+      "group": "Whole program",
+      "country": "us",
+      "item": "BNATCS full ask ($12.5B + $50.1B)",
+      "local": 62600,
+      "currency": "USD",
+      "src": "dot_501"
+    },
+    {
+      "group": "Whole program",
+      "country": "sg",
+      "item": "CAAS ANS upgrade program, 15 years",
+      "local": 4000,
+      "currency": "SGD",
+      "src": "caas_2026"
+    },
+    {
+      "group": "Whole program",
+      "country": "au",
+      "item": "OneSKY total program estimate",
+      "local": 4110,
+      "currency": "AUD",
+      "src": "anao_onesky_2019"
+    }
+  ],
+  "fx": {
+    "USD": 1,
+    "EUR": 1.1,
+    "AUD": 0.65,
+    "SGD": 0.75,
+    "note": "Round exchange rates for scale only; no inflation adjustment"
+  }
+}

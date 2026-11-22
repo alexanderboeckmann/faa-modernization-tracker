@@ -1,0 +1,258 @@
+{
+  "modernskies": {
+    "title": "FAA Modern Skies tracker",
+    "url": "https://modernskies.faa.gov/"
+  },
+  "faa_factsheet": {
+    "title": "FAA, BNATCS fact sheet (Dec 4, 2025)",
+    "url": "https://www.faa.gov/newsroom/brand-new-air-traffic-control-system-bnatcs-fact-sheet"
+  },
+  "dot_factsheet_pdf": {
+    "title": "DOT, BNATCS fact sheet PDF (Dec 2025)",
+    "url": "https://www.transportation.gov/sites/dot.gov/files/2025-12/Brand%20News%20Air%20Traffic%20Control%20System%20Fact%20Sheet.pdf"
+  },
+  "dot_nowboarding": {
+    "title": "DOT, 'Now Boarding' progress release (May 22, 2026)",
+    "url": "https://www.transportation.gov/briefing-room/now-boarding-trumps-transportation-secretary-sean-p-duffy-faa-administrator-bedford"
+  },
+  "dot_501": {
+    "title": "DOT, $50.1B full-funding request (Nov 17, 2026)",
+    "url": "https://www.transportation.gov/briefing-room/trump-administration-calls-congress-fully-fund-air-traffic-control-modernization-501"
+  },
+  "dot_radar": {
+    "title": "DOT, radar contracts to RTX and Indra (Jan 5, 2026)",
+    "url": "https://www.transportation.gov/briefing-room/trumps-transportation-secretary-duffy-faa-administrator-bedford-announce-radar"
+  },
+  "dot_integrator": {
+    "title": "DOT, Peraton named prime integrator (Dec 4, 2025)",
+    "url": "https://www.transportation.gov/briefing-room/trumps-transportation-secretary-duffy-faa-administrator-bedford-announce-prime"
+  },
+  "hklaw": {
+    "title": "Holland & Knight, 'The BNATCS State of Play' (Apr 27, 2026)",
+    "url": "https://www.hklaw.com/en/insights/publications/2026/04/the-bnatcs-state-of-play"
+  },
+  "gao26": {
+    "title": "GAO-26-107992, Ambitious New Modernization Effort Needs Cost and Schedule Planning (Sep 22, 2026)",
+    "url": "https://files.gao.gov/reports/GAO-26-107992/index.html?pubDate=20260922"
+  },
+  "gao24": {
+    "title": "GAO-24-107001, FAA Actions Are Urgently Needed to Modernize Aging Systems (Sep 23, 2024)",
+    "url": "https://gao.gov/products/GAO-24-107001"
+  },
+  "register_gao24": {
+    "title": "The Register on GAO-24-107001 (Sep 24, 2024)",
+    "url": "https://www.theregister.com/2024/09/24/us_air_traffic_control_system_upgrade/"
+  },
+  "quecon": {
+    "title": "Quecon, FAA modernization update (FAA figures of Aug 25, 2026)",
+    "url": "https://www.quecon.com/blog-posts/faa-modernization-update-ip-voice-network-upgrades-and-nas-resiliency/"
+  },
+  "nbaa": {
+    "title": "NBAA Business Aviation Insider, Nov 2026 (FAA figures as of Aug 2026)",
+    "url": "https://nbaa.org/news/business-aviation-insider/2026-11/how-americas-brand-new-air-traffic-control-system-will-help-business-aviation/"
+  },
+  "aopa": {
+    "title": "AOPA, Bedford highlights ATC overhaul progress (Sep 17, 2026)",
+    "url": "https://www.aopa.org/news-and-media/all-news/2026/september/17/bedford-highlights-atc-overhaul-progress-urges-continued-funding"
+  },
+  "govmarket": {
+    "title": "Government Market News (Bedford figures as of Sep 1, 2026)",
+    "url": "https://govmarketnews.com/faa-air-traffic-control-modernization-projects/"
+  },
+  "avweb_peraton": {
+    "title": "AvWeb, FAA reportedly frustrated with ATC overhaul contractor (2026)",
+    "url": "https://avweb.com/aviation-news/faa-frustrated-atc-overhaul-contractor/"
+  },
+  "oig_travelweekly": {
+    "title": "Travel Weekly citing DOT OIG 2024 on NextGen cost (Dec 2025)",
+    "url": "https://www.travelweekly.com/Travel-News/Government/DOT-puts-Peraton-in-charge-air-traffic-control-overhaul"
+  },
+  "faa_nextgen_acc": {
+    "title": "FAA, NextGen accomplishments",
+    "url": "https://www.faa.gov/nextgen/accomplishments"
+  },
+  "faa_nextgen": {
+    "title": "FAA, NextGen overview",
+    "url": "https://www.faa.gov/nextgen?cid=TW136"
+  },
+  "faa_nextgen_fy": {
+    "title": "FAA, NextGen accomplishments by fiscal year",
+    "url": "https://www.faa.gov/nextgen/background/accomplishments"
+  },
+  "natca_senate": {
+    "title": "NATCA testimony to Senate Commerce on facilities",
+    "url": "https://www.commerce.senate.gov/services/files/3CF245B2-F486-4EF3-BA98-470459DF33E5"
+  },
+  "rollcall": {
+    "title": "Roll Call, FAA COO on en route center age (Oct 8, 2024)",
+    "url": "https://rollcall.com/2024/10/08/congress-urged-to-shift-billions-to-improve-aging-flight-controls/"
+  },
+  "oig2008": {
+    "title": "DOT OIG AV-2009-012, Management and Maintenance of ATC Facilities (Dec 15, 2008)",
+    "url": "https://webarchive.library.unt.edu/web/20130215164824/http://www.oig.dot.gov/library-item/4821"
+  },
+  "oig2012": {
+    "title": "DOT OIG facilities consolidation report (Jul 2012)",
+    "url": "https://webarchive.library.unt.edu/web/20161101114431/https://www.oig.dot.gov/sites/default/files/Facilities%20Consolidation%20Report%5E7-17-12.pdf"
+  },
+  "caas_lorads": {
+    "title": "CAAS, ATM systems and technology (LORADS)",
+    "url": "https://www.caas.gov.sg/industry/airspace-management-and-aerial-activities/air-traffic-services/air-traffic-management-systems-and-technology/"
+  },
+  "icao_lorads": {
+    "title": "ICAO APAC, Singapore LORADS III transition (2018)",
+    "url": "https://icao.int/APAC/Meetings/2018 ATMASS/SP202 - Singapore_LORADS III transition_2018_11_22.pdf"
+  },
+  "caas_2026": {
+    "title": "CAAS, ANS capability upgrades (Jul 22, 2026)",
+    "url": "https://www.caas.gov.sg/resources/media-and-publication/newsroom/caas-upgrades-air-navigation-services-capabilities-to-meet-rising-demand-for-air-travel/"
+  },
+  "jcab_kobe": {
+    "title": "JCAB, Setting up Kobe ACC / TEPS",
+    "url": "https://www.mlit.go.jp/en/koku/koku_fr13_000026.html"
+  },
+  "jcab_reorg": {
+    "title": "JCAB, domestic airspace reorganization",
+    "url": "https://www.mlit.go.jp/en/koku/koku_fr13_000033.html"
+  },
+  "icao_jpn_reorg": {
+    "title": "ICAO APAC WP17, Japan airspace restructuring (2025)",
+    "url": "https://www.icao.int/sites/default/files/APAC/Meetings/2025/2025%20ATMSG13/03-Working%20Papers/WP17%20Challenges%20Arising%20from%20Airspace%20Restructuring%20in%20Japan%20and%20their%20Solutions.pdf"
+  },
+  "carats2040": {
+    "title": "MLIT, CARATS2040 (Jun 2025)",
+    "url": "https://www.mlit.go.jp/koku/carats/rdk40188/wp-content/uploads/2026/04/CARATS2040_EN.pdf"
+  },
+  "icao_jpn_cpdlc": {
+    "title": "ICAO APAC IP17, Japan CARATS update (2020)",
+    "url": "https://www.icao.int/sites/default/files/APAC/Meetings/2020/2020%20CNS%20SG24/4-Information%20Papers/IP17_JPN%20AI8.1%20-%20The%20Long-term%20Vision%20for%20the%20Future%20Air%20Traffic%20Systems%20of%20Japan%20-%20CARATS.pdf"
+  },
+  "dfs_munich": {
+    "title": "DFS, iCAS takes over at Munich (Mar 30, 2023)",
+    "url": "https://dfs.de/homepage/en/media/press/2023/30-03-2023-the-next-system-generation-takes-over-at-the-dfs-control-centre-in-munich/"
+  },
+  "sdm_icas": {
+    "title": "SESAR Deployment Manager, iCAS deployment project",
+    "url": "https://sesardeploymentmanager.eu/projects/featured/2015_190_af3-deployment-of-air-traffic-control-system-icas-implementation-of"
+  },
+  "atm_icas2": {
+    "title": "Air Traffic Management, iCAS II and DFS radar contract",
+    "url": "https://www.airtrafficmanagement.net/node/164687"
+  },
+  "dfs_direct1": {
+    "title": "DFS direct 1/2026 (Bremen iCAS training)",
+    "url": "https://dfs.de/homepage/de/medien/publikationen/direct-1-2026.pdf?cid=jd6"
+  },
+  "eurocontrol_ifmp": {
+    "title": "EUROCONTROL, iFMP operational at Karlsruhe UAC",
+    "url": "https://www.eurocontrol.int/press-release/ifmp-eurocontrol-maastricht-uac-becomes-operational-karlsruhe-uac"
+  },
+  "caa_2026": {
+    "title": "UK CAA, review of NATS incident on 8 Sep 2026 (terms of reference)",
+    "url": "https://www.caa.co.uk/publication/download/29795"
+  },
+  "caa_cap2993": {
+    "title": "UK CAA CAP2993, review of Aug 2023 NATS failure",
+    "url": "https://www.caa.co.uk/CAP2993"
+  },
+  "aerocorner_nats": {
+    "title": "AeroCorner, NATS failures 2023 to 2026",
+    "url": "https://aerocorner.com/blog/nats-uk-air-traffic-control-failure-2026/"
+  },
+  "navcan_aireon": {
+    "title": "NAV CANADA, Aireon stake sale (space-based ADS-B history)",
+    "url": "https://www.navcanada.ca/en/news/news-releases/nav-canada-to-sell-its-stake-in-aireon-holdings-llc-to-iridium-communications-inc..aspx"
+  },
+  "navcan_summer26": {
+    "title": "NAV CANADA, Summer 2026 operational readiness backgrounder",
+    "url": "https://www.navcanada.ca/en/other/_localised-assets/summer-2026-operational-readiness-bg-20260511-017-en.pdf"
+  },
+  "navcan_sesar": {
+    "title": "NAV CANADA joins SESAR JU (TBO program)",
+    "url": "https://www.navcanada.ca/en/news/news-releases/two-continents-one-sky-nav-canada-becomes-the-first-ansp-beyond-europe-to-join-the-sesar-joint-undertaking.aspx"
+  },
+  "anao_onesky": {
+    "title": "ANAO Report 46 2024-25, Management of the OneSKY Contract",
+    "url": "https://www.anao.gov.au/sites/default/files/2025-06/Auditor-General_Report_2024-25_46.pdf"
+  },
+  "aa_cmats": {
+    "title": "Australian Aviation, OneSKY-CMATS go-live Q3 2027 (Feb 19, 2025)",
+    "url": "https://australianaviation.com.au/?p=1406134"
+  },
+  "aa_poc": {
+    "title": "Australian Aviation, OneSKY-CMATS Projects of Concern Summit (Jun 12, 2026)",
+    "url": "https://australianaviation.com.au/?p=1435049"
+  },
+  "airservices_voice": {
+    "title": "Airservices, CMATS voice transition milestones",
+    "url": "https://airservicesaustralia.com/?p=28104"
+  },
+  "us_eu_2024": {
+    "title": "FAA/EUROCONTROL, US-Europe comparison of ANS performance (Jan 2024)",
+    "url": "https://transport.ec.europa.eu/system/files/2024-01/2024-01-US_Europe-comparison-ANS_performance.pdf"
+  },
+  "flightglobal_obbba": {
+    "title": "FlightGlobal, Congress passes $12.5B for ATC (Jul 2025)",
+    "url": "https://www.flightglobal.com/aerospace/us-congress-passes-bill-providing-faa-125bn-for-air-traffic-control-overhaul/163662.article"
+  },
+  "skift_obbba": {
+    "title": "Skift, $12.5B ATC breakdown (Jul 2, 2025)",
+    "url": "https://skift.com/2025/07/02/senate-has-12-5-billion-for-air-traffic-reform-heres-the-breakdown/"
+  },
+  "reuters_peraton": {
+    "title": "Reuters, Peraton contract worth $1.5B; radar cost $1.1B (Feb 10, 2026)",
+    "url": "https://www.yahoo.com/news/articles/faa-says-air-traffic-control-011348853.html"
+  },
+  "rs_voice": {
+    "title": "Rohde & Schwarz USA, $4.9B FAA voice contract (Apr 21, 2026)",
+    "url": "https://www.rohde-schwarz.com/it/_229356-1619688.html"
+  },
+  "flying_voice": {
+    "title": "FLYING, FAA awards $5B contract for 462 voice switches (Apr 2026)",
+    "url": "https://www.flyingmag.com/faa-5b-contract-atc-digital-voice-switches/"
+  },
+  "register_radar": {
+    "title": "The Register, radar contracts: Collins $438M, Indra $342M (Jan 7, 2026)",
+    "url": "https://www.theregister.com/2026/01/07/faa_radar_atc_deals/"
+  },
+  "leidos_eids": {
+    "title": "HSToday, Leidos E-IDS contract (~$292M)",
+    "url": "https://www.hstoday.us/?p=115679"
+  },
+  "indra_radios": {
+    "title": "GovConWire, Indra $244M radio contract",
+    "url": "https://www.govconwire.com/articles/indra-air-traffic-awarded-244m-faa-contract-to-replace-legacy-uhv-vhf-radios"
+  },
+  "att_fens": {
+    "title": "AvWeb, AT&T $74.3M start on FENS (Aug 2026)",
+    "url": "https://avweb.com/aviation-news/faa-att-74-3-million-new-atc-network/"
+  },
+  "spectrum_eram": {
+    "title": "IEEE Spectrum, state of ERAM ($2.1B estimate)",
+    "url": "https://spectrum.ieee.org/what-is-the-true-state-of-faas-en-route-automation-modernization-program"
+  },
+  "planetizen_eram": {
+    "title": "Planetizen, OIG: ERAM four years late, $330M over",
+    "url": "https://www.planetizen.com/node/58458"
+  },
+  "airservices_onesky": {
+    "title": "Airservices, OneSKY contractual arrangements response ($1.205B)",
+    "url": "https://www.airservicesaustralia.com/?p=3539"
+  },
+  "anao_onesky_2019": {
+    "title": "ANAO, OneSKY contractual arrangements (A$4.11B estimate)",
+    "url": "https://www.anao.gov.au/work/performance-audit/onesky-contractual-arrangements"
+  },
+  "engineer_lorads": {
+    "title": "The Engineer, Thales \u20ac145M LORADS III contract",
+    "url": "https://www.theengineer.co.uk/content/news/caas-updates-lorads-ii"
+  },
+  "avweb_stars": {
+    "title": "AvWeb, 'A Few Years, A Few Billions' (STARS, ERAM)",
+    "url": "https://avweb.com/leadnews/a-few-years-a-few-billions/"
+  },
+  "gao_nextgen_2023": {
+    "title": "GAO-24-105254, NextGen delays and challenges (Nov 2023)",
+    "url": "https://www.gao.gov/assets/d24105254.pdf"
+  }
+}

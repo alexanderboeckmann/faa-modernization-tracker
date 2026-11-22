@@ -1,0 +1,246 @@
+{
+  "snapshots": [
+    {
+      "asOf": "2026-11-16",
+      "capturedAt": "2026-11-22T22:40:00Z",
+      "source": "https://modernskies.faa.gov/",
+      "bundle": "https://modernskies.faa.gov/assets/index-DehWwaKg.js",
+      "programsHash": "18ce2cd5e8d6e9a8",
+      "programs": [
+        {
+          "id": "tdm-to-ip",
+          "name": "TDM-to-IP (TIR)",
+          "category": "Communications",
+          "percentComplete": 70,
+          "onTrack": true,
+          "completed": 3624,
+          "targetAsOfDate": 2922,
+          "totalPlanned": 5170,
+          "monthComplete": 150,
+          "monthPlan": 150,
+          "unitName": "Projects"
+        },
+        {
+          "id": "radio",
+          "name": "Radio (NEXCOM)",
+          "category": "Communications",
+          "percentComplete": 31,
+          "onTrack": true,
+          "completed": 484,
+          "targetAsOfDate": 436,
+          "totalPlanned": 1581,
+          "monthComplete": 34,
+          "monthPlan": 32,
+          "unitName": "Sites"
+        },
+        {
+          "id": "analog-protocol",
+          "name": "Analog Protocol Converter (APC)",
+          "category": "Communications",
+          "percentComplete": 10,
+          "onTrack": false,
+          "completed": 260,
+          "targetAsOfDate": 310,
+          "totalPlanned": 2696,
+          "monthComplete": 65,
+          "monthPlan": 101,
+          "unitName": "Sites"
+        },
+        {
+          "id": "voice-switch",
+          "name": "Voice Switch (IPVCS)",
+          "category": "Communications",
+          "percentComplete": 50,
+          "onTrack": false,
+          "completed": 226,
+          "targetAsOfDate": 134,
+          "totalPlanned": 450,
+          "monthComplete": 15,
+          "monthPlan": 36,
+          "unitName": "Switches"
+        },
+        {
+          "id": "e-ids",
+          "name": "Enterprise Info Display (E-IDS)",
+          "category": "Automation",
+          "percentComplete": 1,
+          "onTrack": true,
+          "completed": 5,
+          "targetAsOfDate": 0,
+          "totalPlanned": 435,
+          "monthComplete": 5,
+          "monthPlan": 0,
+          "unitName": "Displays"
+        },
+        {
+          "id": "tfdm",
+          "name": "Flight Data Manager (TFDM)",
+          "category": "Automation",
+          "percentComplete": 29,
+          "onTrack": true,
+          "completed": 26,
+          "targetAsOfDate": 26,
+          "totalPlanned": 89,
+          "monthComplete": 3,
+          "monthPlan": 3,
+          "unitName": "Towers"
+        },
+        {
+          "id": "radar",
+          "name": "Radar (RSR)",
+          "category": "Surveillance",
+          "percentComplete": 2,
+          "onTrack": false,
+          "completed": 15,
+          "targetAsOfDate": 17,
+          "totalPlanned": 612,
+          "monthComplete": 0,
+          "monthPlan": 5,
+          "unitName": "Radars"
+        },
+        {
+          "id": "sai",
+          "name": "Surface Awareness (SAI)",
+          "category": "Surveillance",
+          "percentComplete": 65,
+          "onTrack": true,
+          "completed": 143,
+          "targetAsOfDate": 89,
+          "totalPlanned": 220,
+          "monthComplete": 2,
+          "monthPlan": 0,
+          "unitName": "Sites"
+        },
+        {
+          "id": "smr",
+          "name": "Surface Movement Radar (SMR)",
+          "category": "Surveillance",
+          "percentComplete": 15,
+          "onTrack": true,
+          "completed": 8,
+          "targetAsOfDate": 6,
+          "totalPlanned": 53,
+          "monthComplete": 0,
+          "monthPlan": 0,
+          "unitName": "Radars"
+        },
+        {
+          "id": "alaska",
+          "name": "Alaska (AWOS/VWOS/AAC)",
+          "category": "Alaska Airspace",
+          "percentComplete": 22,
+          "onTrack": true,
+          "completed": 42,
+          "targetAsOfDate": 35,
+          "totalPlanned": 191,
+          "monthComplete": 6,
+          "monthPlan": 9,
+          "unitName": "Sites"
+        },
+        {
+          "id": "uis",
+          "name": "Unstaffed Infrastructure (UIS)",
+          "category": "Facilities",
+          "percentComplete": 2,
+          "onTrack": true,
+          "completed": 3,
+          "targetAsOfDate": 2,
+          "totalPlanned": 140,
+          "monthComplete": 3,
+          "monthPlan": 2,
+          "unitName": "Sites"
+        },
+        {
+          "id": "tss",
+          "name": "Tower Simulation System (TSS)",
+          "category": "Other Systems",
+          "percentComplete": 17,
+          "onTrack": true,
+          "completed": 20,
+          "targetAsOfDate": 20,
+          "totalPlanned": 117,
+          "monthComplete": 5,
+          "monthPlan": 5,
+          "unitName": "Simulators"
+        }
+      ],
+      "headline": [
+        {
+          "project": "Telecommunications replacements",
+          "completed": 3651,
+          "total": 5170,
+          "percent": 71,
+          "upcomingThisMonth": 219,
+          "label": "Of 5,170 Telecommunications Replaced"
+        },
+        {
+          "project": "Surface Awareness Initiative installations",
+          "completed": 143,
+          "total": 220,
+          "percent": 65,
+          "upcomingThisMonth": 1,
+          "label": "Of 220 Surface Awareness Initiatives Installed"
+        },
+        {
+          "project": "Radio Site Conversions",
+          "completed": 497,
+          "total": 1581,
+          "percent": 31,
+          "upcomingThisMonth": 43,
+          "label": "Of 1,581 Radio Sites Converted"
+        },
+        {
+          "project": "Electronic Flight Strip implementations",
+          "completed": 28,
+          "total": 89,
+          "percent": 31,
+          "upcomingThisMonth": 2,
+          "label": "Of 89 Electronic Flight Strips Implemented"
+        },
+        {
+          "project": "IP Voice Switch Installations",
+          "completed": 230,
+          "total": 450,
+          "percent": 51,
+          "upcomingThisMonth": 25,
+          "label": "Of 450 IP Voice Switches Installed"
+        },
+        {
+          "project": "New Radar System deployments",
+          "completed": 16,
+          "total": 612,
+          "percent": 3,
+          "upcomingThisMonth": 12,
+          "label": "Of 612 New Radar Systems Deployed"
+        },
+        {
+          "project": "Tower Simulation System Deployments",
+          "completed": 20,
+          "total": 117,
+          "percent": 17,
+          "upcomingThisMonth": 4,
+          "label": "Of 117 Tower Simulation Systems Deployed"
+        },
+        {
+          "project": "Enterprise Information Display Systems Planned",
+          "completed": 5,
+          "total": 435,
+          "percent": 1,
+          "upcomingThisMonth": 0,
+          "label": "Of 435 Enterprise Information Display Systems Planned"
+        },
+        {
+          "project": "Surface Movement Radar Installations",
+          "completed": 8,
+          "total": 53,
+          "percent": 15,
+          "upcomingThisMonth": 1,
+          "label": "Of 53 Surface Movement Radars Installed"
+        }
+      ],
+      "note": "Seed snapshot captured by reading the live site in a browser on 2026-11-22. The program table (dashboard) and headline tiles in the same bundle differ slightly (e.g. telecom 3,624 vs 3,651); the headline tiles appear to be more recent."
+    }
+  ],
+  "updated": "2026-11-22T22:40:00Z",
+  "about": "Monthly snapshots of the FAA Modern Skies tracker (modernskies.faa.gov). Appended by scripts/update_faa.py via .github/workflows/monthly-update.yml."
+}

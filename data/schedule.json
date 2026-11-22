@@ -1,0 +1,85 @@
+{
+  "src": "gao26",
+  "programs": [
+    {
+      "program": "e-ids",
+      "name": "Information displays (E-IDS)",
+      "old": "2034-09-30",
+      "new": "2028-09-30"
+    },
+    {
+      "program": "tfdm",
+      "name": "Terminal Flight Data Manager",
+      "old": "2029-09-30",
+      "new": "2028-11-30",
+      "note": "Old plan covered 49 airports; 40 had no prior effort"
+    },
+    {
+      "program": "tdm-to-ip",
+      "name": "Telecommunications",
+      "old": "2030-09-30",
+      "new": "2028-12-31"
+    },
+    {
+      "program": "voice-switch",
+      "name": "Voice switches",
+      "old": "2037-09-30",
+      "new": "2028-11-30"
+    },
+    {
+      "program": "radio",
+      "name": "Radios",
+      "old": "2037-09-30",
+      "new": "2028-12-31"
+    },
+    {
+      "program": "radar",
+      "name": "Radars",
+      "old": null,
+      "new": "2028-12-31",
+      "note": "No prior effort. DOT targets June 2028"
+    },
+    {
+      "program": "sai",
+      "name": "Surface Awareness Initiative",
+      "old": "2028-09-30",
+      "new": "2027-08-31",
+      "note": "Old plan covered 60 airports"
+    },
+    {
+      "program": "smr",
+      "name": "Surface Movement Radar",
+      "old": "2030-09-30",
+      "new": "2028-12-31"
+    },
+    {
+      "program": "alaska",
+      "name": "Alaska weather and automation",
+      "old": null,
+      "new": "2028-12-31",
+      "note": "Weather cameras and VWOS 9/30/2028; AWOS and AAC 12/31/2028"
+    },
+    {
+      "program": "tss",
+      "name": "Tower Simulation System",
+      "old": null,
+      "new": "2028-05-31"
+    },
+    {
+      "program": "analog-protocol",
+      "name": "Analog Protocol Converter",
+      "old": null,
+      "new": "2028-12-31",
+      "note": "Part of telecom transition; deadline assumed equal to telecom",
+      "assumed": true
+    },
+    {
+      "program": "uis",
+      "name": "Unstaffed infrastructure",
+      "old": null,
+      "new": "2028-12-31",
+      "note": "Deadline assumed: phase 1 end",
+      "assumed": true
+    }
+  ]
+}

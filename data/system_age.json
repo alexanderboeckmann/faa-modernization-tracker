@@ -1,0 +1,134 @@
+{
+  "asOfYear": 2026,
+  "items": [
+    {
+      "name": "En route centers (ARTCC buildings)",
+      "group": "Facilities",
+      "age_low": 60,
+      "age_high": 70,
+      "design_life": 50,
+      "after_2028": "Still 60+ (one new consolidated ARTCC funded; five more in the $50.1B request)",
+      "after_2028_age": 62,
+      "src": "rollcall",
+      "note": "FAA COO, 2024: designed for 50 years, now 60 to 70 on average. Last built 1969 (dot_501)."
+    },
+    {
+      "name": "Copper telecom lines",
+      "group": "Systems",
+      "age_low": 55,
+      "age_high": 65,
+      "design_life": null,
+      "after_2028": "Replaced by fiber, wireless, LEO satellite",
+      "after_2028_age": 2,
+      "src": "gao26",
+      "note": "Date from the 1960s; no longer supported by providers."
+    },
+    {
+      "name": "Surveillance radars",
+      "group": "Systems",
+      "age_low": 35,
+      "age_high": 45,
+      "design_life": 20,
+      "after_2028": "Up to 612 replaced",
+      "after_2028_age": 1,
+      "src": "dot_radar",
+      "note": "'Most of our radars date back to the 1980s' (DOT). GAO: past their 20-year planned life."
+    },
+    {
+      "name": "Combined TRACON/towers",
+      "group": "Facilities",
+      "age_low": 35,
+      "age_high": 35,
+      "design_life": 30,
+      "after_2028": "Unchanged by phase 1; up to 140 towers in the $50.1B request",
+      "after_2028_age": 37,
+      "src": "natca_senate",
+      "note": "132 combined facilities averaging about 35 years. Design life per OIG: 25 to 30 (oig2008). Undated testimony; treat as approximate."
+    },
+    {
+      "name": "Voice switches",
+      "group": "Systems",
+      "age_low": 25,
+      "age_high": 35,
+      "design_life": null,
+      "after_2028": "All 450 replaced with IP switches",
+      "after_2028_age": 1,
+      "src": "gao26",
+      "note": "Oldest technology deployed in the 1990s; most past end-of-life."
+    },
+    {
+      "name": "Stand-alone TRACONs",
+      "group": "Facilities",
+      "age_low": 25,
+      "age_high": 30,
+      "design_life": 30,
+      "after_2028": "Unchanged by phase 1",
+      "after_2028_age": 27,
+      "src": "natca_senate",
+      "note": "'On average more than 25 years old.'"
+    },
+    {
+      "name": "ERAM en route automation",
+      "group": "Systems",
+      "age_low": 11,
+      "age_high": 11,
+      "design_life": null,
+      "after_2028": "Upgrades only; replacement is in the unfunded software phase",
+      "after_2028_age": 13,
+      "src": "faa_nextgen_acc",
+      "note": "Complete at 20 centers in 2015."
+    }
+  ],
+  "facts": [
+    {
+      "text": "37% of FAA's 138 ATC systems were rated unsustainable and 39% potentially unsustainable (2024)",
+      "src": "gao26"
+    },
+    {
+      "text": "Of the most critical at-risk systems GAO listed, two were over 40 years old and seven over 30",
+      "src": "register_gao24"
+    },
+    {
+      "text": "Flight-delay minutes from equipment issues in 2025 were about 300% above the 2010 to 2024 average",
+      "src": "dot_factsheet_pdf"
+    },
+    {
+      "text": "Many older voice radios have been out of production since 2015 or earlier",
+      "src": "gao26"
+    }
+  ],
+  "core_automation": [
+    {
+      "country": "us",
+      "system": "ERAM (en route)",
+      "since": 2015,
+      "src": "faa_nextgen_acc"
+    },
+    {
+      "country": "sg",
+      "system": "LORADS III",
+      "since": 2013,
+      "replace": 2030,
+      "src": "icao_lorads"
+    },
+    {
+      "country": "jp",
+      "system": "TEPS (en route)",
+      "since": 2019,
+      "src": "jcab_kobe"
+    },
+    {
+      "country": "de",
+      "system": "iCAS (Karlsruhe, then Munich 2023)",
+      "since": 2017,
+      "src": "dfs_munich"
+    },
+    {
+      "country": "au",
+      "system": "TAAATS, replaced by CMATS",
+      "since": null,
+      "replace": 2027,
+      "src": "aa_cmats"
+    }
+  ]
+}
