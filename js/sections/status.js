@@ -1,6 +1,9 @@
 import { $, svg, text, chart, barPath, widthOf, fmt, statusBadge, hitRow, onResize } from '../lib.js';
 
 const share = p => p.completed / p.totalPlanned;
+const ahead = p => p.completed >= p.targetAsOfDate;
+const signed = n => `${n >= 0 ? '+' : ''}${fmt(n)}`;
+const badge = p => statusBadge(ahead(p), p.completed > p.targetAsOfDate ? 'Ahead of plan' : 'On plan', 'Behind plan');
 
 function draw(programs) {
   const box = $('statusChart');
@@ -29,12 +32,11 @@ function draw(programs) {
       svg('rect', { x: sx(p.targetAsOfDate / p.totalPlanned) - 1, y, width: 2, height: 22, fill: 'var(--text-primary)' }, root);
     }
     text(root, labelW + plotW + 8, y + 16, `${Math.round(share(p) * 100)}%`, 'lbl');
-    const badge = svg('foreignObject', { x: labelW + plotW + pctW - 14, y: y + 3, width: statusW + 14, height: 20 }, root);
-    badge.innerHTML = `<div xmlns="http://www.w3.org/1999/xhtml">${statusBadge(p.onTrack, 'On track', 'Behind plan')}</div>`;
+    const status = svg('foreignObject', { x: labelW + plotW + pctW - 14, y: y + 3, width: statusW + 14, height: 20 }, root);
+    status.innerHTML = `<div xmlns="http://www.w3.org/1999/xhtml">${badge(p)}</div>`;
 
-    const delta = p.completed - p.targetAsOfDate;
     hitRow(root, y, width, rowH, `<b>${p.name}</b><br>${fmt(p.completed)} of ${fmt(p.totalPlanned)} (${Math.round(share(p) * 100)}%)
-      <br><span class="m">FAA plan to date ${fmt(p.targetAsOfDate)} · ${delta >= 0 ? '+' : ''}${fmt(delta)} vs plan</span>
+      <br><span class="m">FAA plan to date ${fmt(p.targetAsOfDate)} · ${signed(p.completed - p.targetAsOfDate)} vs plan</span>
       <br><span class="m">Last month ${p.monthComplete} done vs ${p.monthPlan} planned</span>`);
   });
 }
@@ -44,8 +46,8 @@ export function render({ snapshot }) {
   onResize(() => draw(programs));
 
   $('statusTable').innerHTML = `<table>
-    <tr><th>Program</th><th>Category</th><th class="n">Completed</th><th class="n">Plan to date</th><th class="n">Total</th><th class="n">%</th><th>FAA flag</th></tr>
+    <tr><th>Program</th><th>Category</th><th class="n">Completed</th><th class="n">Plan to date</th><th class="n">vs plan</th><th class="n">Total</th><th class="n">%</th><th>Status</th></tr>
     ${programs.map(p => `<tr><td>${p.name}</td><td>${p.category}</td><td class="n">${fmt(p.completed)}</td><td class="n">${fmt(p.targetAsOfDate)}</td>
-      <td class="n">${fmt(p.totalPlanned)}</td><td class="n">${Math.round(share(p) * 100)}</td><td>${statusBadge(p.onTrack, 'On track', 'Behind plan')}</td></tr>`).join('')}
+      <td class="n">${signed(p.completed - p.targetAsOfDate)}</td><td class="n">${fmt(p.totalPlanned)}</td><td class="n">${Math.round(share(p) * 100)}</td><td>${badge(p)}</td></tr>`).join('')}
   </table>`;
 }
