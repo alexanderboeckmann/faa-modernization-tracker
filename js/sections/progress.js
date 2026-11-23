@@ -40,7 +40,8 @@ function buildSeries(history, snapshots, latest) {
   return series;
 }
 
-function drawPanel(container, s, deadline, sources) {
+function drawPanel(container, s, start, deadline, sources) {
+  const begin = parseDate(start);
   const end = parseDate(deadline);
   const last = s.points.at(-1);
   container.innerHTML = `<h3>${s.label}</h3><div class="m">${last ? `${Math.round(last.pct)}% as of ${fmtDate(last.date)}` : ''} · deadline ${fmtMonth(end)}</div>`;
@@ -64,9 +65,9 @@ function drawPanel(container, s, deadline, sources) {
     text(root, x, height - 6, y, 'ax', 'middle');
   });
 
+  svg('line', { x1: sx(begin), y1: sy(0), x2: sx(end), y2: sy(100), stroke: 'var(--muted)', 'stroke-width': 1.5, 'stroke-dasharray': '4 3' }, root);
+
   if (s.points.length) {
-    const first = s.points[0];
-    svg('line', { x1: sx(first.d), y1: sy(first.pct), x2: sx(end), y2: sy(100), stroke: 'var(--muted)', 'stroke-width': 1.5, 'stroke-dasharray': '4 3' }, root);
     if (s.points.length > 1) {
       const d = s.points.map((p, i) => `${i ? 'L' : 'M'}${sx(p.d)},${sy(p.pct)}`).join(' ');
       svg('path', { d, fill: 'none', stroke: 'var(--s1)', 'stroke-width': 2, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }, root);
@@ -89,7 +90,7 @@ export function render({ data, snapshot, deadlines, cite }) {
     const panel = document.createElement('div');
     panel.className = 'mult';
     box.appendChild(panel);
-    drawPanel(panel, s, deadlines[s.program].new, data.sources);
+    drawPanel(panel, s, data.schedule.programStart, deadlines[s.program].new, data.sources);
   });
 
   const notes = data.history.notes.map(n => `${n.text} ${cite(n.src)}`).join(' ');
