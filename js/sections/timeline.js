@@ -1,5 +1,7 @@
 import { $, fmtMonth } from '../lib.js';
 
+const when = m => (m.precision === 'year' ? m.date.slice(0, 4) : fmtMonth(m.date));
+
 const KINDS = {
   deploy: { label: 'Deployment', color: 'var(--s1)' },
   program: { label: 'Program', color: 'var(--text-secondary)' },
@@ -21,7 +23,7 @@ export function render({ data, cite }) {
       .map(m => {
         const heading = m.era !== era ? `<div class="tl-era">${(era = m.era)}</div>` : '';
         return `${heading}<div class="tl-item ${m.kind}" style="--dot:${KINDS[m.kind].color}">
-          <span class="tl-date">${fmtMonth(m.date)}</span>
+          <span class="tl-date">${when(m)}</span>
           <span>${m.text}<span class="tl-kind">${KINDS[m.kind].label}</span> ${cite(m.src)}</span></div>`;
       })
       .join('');

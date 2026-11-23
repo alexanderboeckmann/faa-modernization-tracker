@@ -29,11 +29,17 @@ export function barPath(x, y, w, h, r = 4) {
 
 export const widthOf = node => Math.max(320, Math.min(node.clientWidth || 1000, 1076));
 
-export const fmt = n => n == null ? 'n/a' : n.toLocaleString('en-US');
-export const money = b => b >= 1 ? `$${+b.toFixed(2)}B` : `$${Math.round(b * 1000)}M`;
+export const fmt = n => (n == null ? 'n/a' : n.toLocaleString('en-US'));
+export const money = b => (b >= 1 ? `$${+b.toFixed(2)}B` : `$${Math.round(b * 1000)}M`);
 export const parseDate = s => new Date(`${s.length === 7 ? `${s}-01` : s}T00:00:00Z`);
-export const fmtDate = s => parseDate(s).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
-export const fmtMonth = d => (typeof d === 'string' ? parseDate(d) : d).toLocaleDateString('en-US', { year: 'numeric', month: 'short', timeZone: 'UTC' });
+export const fmtDate = s =>
+  parseDate(s).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
+export const fmtMonth = d =>
+  (typeof d === 'string' ? parseDate(d) : d).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    timeZone: 'UTC',
+  });
 
 export function statusBadge(ok, yes, no) {
   const icon = ok

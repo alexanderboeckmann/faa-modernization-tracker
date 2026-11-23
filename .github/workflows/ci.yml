@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Lint
+        run: |
+          pip install ruff==0.7.4
+          ruff check scripts
+          ruff format --check scripts
+          npx --yes prettier@3.3.3 --check "js/**/*.js" styles.css index.html
+
+      - name: Validate data
+        run: python scripts/validate_data.py
+
+      - name: Parser test
+        run: python scripts/update_faa.py --bundle tests/fixture_bundle.js --dry-run || [ $? -eq 3 ]
+
+      - name: Render check
+        run: python scripts/check_render.py

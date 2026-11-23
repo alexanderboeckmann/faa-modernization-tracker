@@ -1,5 +1,5 @@
 {
-  "about": "Dated BNATCS progress points from FAA/DOT statements before monthly tracker snapshots began. Percent for telecom, unit counts elsewhere.",
+  "about": "Dated BNATCS progress from FAA and DOT statements. Percent for telecom, unit counts elsewhere. 'approx' marks rounded or 'more than' figures, or an approximate date.",
   "series": [
     {
       "id": "telecom_pct",
@@ -8,42 +8,16 @@
       "unit": "% of 5,170",
       "total": 100,
       "points": [
-        {
-          "date": "2025-12-15",
-          "value": 35,
-          "approx": true,
-          "src": "hklaw",
-          "note": "Mid-December 2025 congressional testimony"
-        },
-        {
-          "date": "2026-04-21",
-          "value": 50,
-          "approx": true,
-          "src": "hklaw",
-          "note": "'Nearly 50%' at Apr 21 DOT briefing"
-        },
-        {
-          "date": "2026-05-22",
-          "value": 51,
-          "src": "dot_nowboarding"
-        },
-        {
-          "date": "2026-08-25",
-          "value": 63,
-          "src": "quecon"
-        },
-        {
-          "date": "2026-08-31",
-          "value": 64,
-          "src": "nbaa",
-          "note": "3,320+ circuits converted"
-        },
-        {
-          "date": "2026-11-16",
-          "value": 71,
-          "src": "modernskies",
-          "note": "3,651 of 5,170"
-        }
+        {"date": "2025-12-04", "value": 33, "approx": true, "src": "dot_integrator", "note": "'One-third' of copper converted"},
+        {"date": "2025-12-16", "value": 35, "src": "aaae_dec2025", "note": "House Aviation hearing testimony"},
+        {"date": "2026-02-10", "value": 40, "src": "reuters_peraton", "note": "Briefing to House lawmakers"},
+        {"date": "2026-04-21", "value": 50, "approx": true, "src": "dot_summit", "note": "'Nearly 50%' at the Modern Skies Summit"},
+        {"date": "2026-05-22", "value": 51, "src": "dot_nowboarding"},
+        {"date": "2026-08-14", "value": 60, "approx": true, "src": "dot_ewr_smr", "note": "Newark SMR-4 release; date approximate"},
+        {"date": "2026-08-25", "value": 63, "src": "dot_plant"},
+        {"date": "2026-09-01", "value": 64, "src": "faa_testimony_sep2026", "note": "'Over 64 percent' as of Sep 1"},
+        {"date": "2026-11-05", "value": 69, "src": "dot_eids"},
+        {"date": "2026-11-16", "value": 71, "src": "modernskies", "note": "3,651 of 5,170"}
       ]
     },
     {
@@ -53,34 +27,12 @@
       "unit": "of 1,581 sites",
       "total": 1581,
       "points": [
-        {
-          "date": "2026-04-21",
-          "value": 270,
-          "approx": true,
-          "src": "hklaw"
-        },
-        {
-          "date": "2026-05-22",
-          "value": 282,
-          "src": "dot_nowboarding"
-        },
-        {
-          "date": "2026-08-25",
-          "value": 388,
-          "src": "quecon"
-        },
-        {
-          "date": "2026-09-17",
-          "value": 400,
-          "approx": true,
-          "src": "aopa",
-          "note": "'More than 400'"
-        },
-        {
-          "date": "2026-11-16",
-          "value": 497,
-          "src": "modernskies"
-        }
+        {"date": "2026-04-21", "value": 270, "approx": true, "src": "dot_summit"},
+        {"date": "2026-05-22", "value": 282, "src": "dot_nowboarding"},
+        {"date": "2026-08-14", "value": 363, "approx": true, "src": "dot_ewr_smr", "note": "Date approximate"},
+        {"date": "2026-08-25", "value": 388, "src": "dot_plant"},
+        {"date": "2026-09-01", "value": 403, "approx": true, "src": "faa_testimony_sep2026", "note": "'Over 403'"},
+        {"date": "2026-11-16", "value": 497, "src": "modernskies"}
       ]
     },
     {
@@ -90,34 +42,13 @@
       "unit": "of 450",
       "total": 450,
       "points": [
-        {
-          "date": "2026-04-21",
-          "value": 40,
-          "approx": true,
-          "src": "hklaw",
-          "note": "'More than 40'"
-        },
-        {
-          "date": "2026-05-22",
-          "value": 62,
-          "src": "dot_nowboarding"
-        },
-        {
-          "date": "2026-08-25",
-          "value": 176,
-          "src": "quecon"
-        },
-        {
-          "date": "2026-08-31",
-          "value": 179,
-          "src": "nbaa",
-          "note": "Baseline target was 130"
-        },
-        {
-          "date": "2026-11-16",
-          "value": 230,
-          "src": "modernskies"
-        }
+        {"date": "2025-09-15", "value": 1, "approx": true, "src": "rs_voice", "note": "First switch live at Allegheny County Airport, Sep 2025"},
+        {"date": "2026-04-21", "value": 40, "approx": true, "src": "dot_summit"},
+        {"date": "2026-05-22", "value": 62, "src": "dot_nowboarding"},
+        {"date": "2026-08-25", "value": 176, "src": "dot_plant"},
+        {"date": "2026-08-31", "value": 179, "src": "nbaa", "note": "Baseline target was 130"},
+        {"date": "2026-11-05", "value": 226, "src": "dot_eids"},
+        {"date": "2026-11-16", "value": 230, "src": "modernskies"}
       ]
     },
     {
@@ -127,29 +58,13 @@
       "unit": "of 220",
       "total": 220,
       "points": [
-        {
-          "date": "2026-04-21",
-          "value": 54,
-          "src": "hklaw",
-          "note": "Surface systems at 54 airports"
-        },
-        {
-          "date": "2026-05-22",
-          "value": 69,
-          "src": "dot_nowboarding"
-        },
-        {
-          "date": "2026-09-17",
-          "value": 100,
-          "approx": true,
-          "src": "aopa",
-          "note": "'More than 100'"
-        },
-        {
-          "date": "2026-11-16",
-          "value": 143,
-          "src": "modernskies"
-        }
+        {"date": "2025-12-04", "value": 44, "src": "dot_integrator"},
+        {"date": "2026-04-21", "value": 54, "src": "dot_summit"},
+        {"date": "2026-05-22", "value": 69, "src": "dot_nowboarding"},
+        {"date": "2026-08-25", "value": 96, "src": "dot_plant"},
+        {"date": "2026-09-01", "value": 101, "src": "faa_testimony_sep2026"},
+        {"date": "2026-11-05", "value": 143, "src": "dot_eids"},
+        {"date": "2026-11-16", "value": 143, "src": "modernskies"}
       ]
     },
     {
@@ -159,43 +74,42 @@
       "unit": "of 89",
       "total": 89,
       "points": [
-        {
-          "date": "2024-09-30",
-          "value": 10,
-          "src": "faa_nextgen_fy",
-          "note": "FY2024: TFDM at 10 airports"
-        },
-        {
-          "date": "2026-04-21",
-          "value": 17,
-          "src": "hklaw"
-        },
-        {
-          "date": "2026-05-22",
-          "value": 17,
-          "src": "dot_nowboarding"
-        },
-        {
-          "date": "2026-09-17",
-          "value": 22,
-          "src": "aopa"
-        },
-        {
-          "date": "2026-11-16",
-          "value": 28,
-          "src": "modernskies"
-        }
+        {"date": "2024-09-30", "value": 10, "src": "faa_nextgen_fy", "note": "FY2024: TFDM at 10 airports"},
+        {"date": "2025-12-04", "value": 13, "src": "dot_integrator"},
+        {"date": "2026-04-21", "value": 17, "src": "dot_summit"},
+        {"date": "2026-08-25", "value": 21, "src": "dot_plant"},
+        {"date": "2026-09-17", "value": 22, "src": "aopa"},
+        {"date": "2026-11-05", "value": 26, "src": "dot_eids"},
+        {"date": "2026-11-16", "value": 28, "src": "modernskies"}
+      ]
+    },
+    {
+      "id": "tss",
+      "program": "tss",
+      "label": "Tower Simulation Systems deployed",
+      "unit": "of 117",
+      "total": 117,
+      "points": [
+        {"date": "2026-08-25", "value": 9, "src": "dot_plant"},
+        {"date": "2026-11-16", "value": 20, "src": "modernskies"}
+      ]
+    },
+    {
+      "id": "smr",
+      "program": "smr",
+      "label": "Surface Movement Radars installed",
+      "unit": "of 53",
+      "total": 53,
+      "points": [
+        {"date": "2026-08-25", "value": 5, "src": "dot_plant", "note": "At 5 airports"},
+        {"date": "2026-09-01", "value": 6, "src": "faa_testimony_sep2026", "note": "At 5 airports"},
+        {"date": "2026-11-16", "value": 8, "src": "modernskies"}
       ]
     }
   ],
   "notes": [
-    {
-      "text": "DOT's Nov 17, 2026 release gives lower counts than the tracker's Nov 16 tiles (469 radio sites, 224 voice switches, 25 towers on flight strips, 18 simulators, 9 surface movement radars). It appears to use an earlier data cut, so it is not plotted.",
-      "src": "dot_501"
-    },
-    {
-      "text": "GAO-26-107992 (data as of May 2026) reports 50% of copper replaced and 17% of radio sites.",
-      "src": "gao26"
-    }
+    {"text": "DOT's Nov 17, 2026 release gives lower counts than the tracker's Nov 16 tiles (469 radio sites, 224 voice switches, 25 towers on flight strips, 18 simulators) and appears to use an earlier data cut, so it is not plotted.", "src": "dot_501"},
+    {"text": "The Dec 2025 figure of 148 radios counts individual radios, not sites, so it is not plotted against the 1,581-site total.", "src": "dot_integrator"},
+    {"text": "GAO-26-107992 (data as of May 2026) reports 50% of copper replaced and 17% of radio sites.", "src": "gao26"}
   ]
 }

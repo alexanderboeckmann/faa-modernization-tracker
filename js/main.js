@@ -25,14 +25,30 @@ const FILES = {
   sources: 'sources',
 };
 
-const SECTIONS = [header, status, pace, progress, schedule, money, age, timeline, scores, criteria, gap, countries, sources];
+const SECTIONS = {
+  header,
+  status,
+  pace,
+  progress,
+  schedule,
+  money,
+  age,
+  timeline,
+  scores,
+  criteria,
+  gap,
+  countries,
+  sources,
+};
 
 async function load() {
-  const entries = await Promise.all(Object.entries(FILES).map(async ([key, file]) => {
-    const res = await fetch(`data/${file}.json`);
-    if (!res.ok) throw new Error(`data/${file}.json: ${res.status}`);
-    return [key, await res.json()];
-  }));
+  const entries = await Promise.all(
+    Object.entries(FILES).map(async ([key, file]) => {
+      const res = await fetch(`data/${file}.json`);
+      if (!res.ok) throw new Error(`data/${file}.json: ${res.status}`);
+      return [key, await res.json()];
+    }),
+  );
   return Object.fromEntries(entries);
 }
 
@@ -45,11 +61,21 @@ async function main() {
     deadlines: Object.fromEntries(data.schedule.programs.map(p => [p.program, p])),
     ...createCitations(data.sources),
   };
-  SECTIONS.forEach(section => section.render(ctx));
+  for (const [name, section] of Object.entries(SECTIONS)) {
+    try {
+      section.render(ctx);
+    } catch (err) {
+      console.error(`section ${name} failed:`, err);
+    }
+  }
 }
 
 main().catch(err => {
-  document.querySelector('.wrap').insertAdjacentHTML('beforeend', `
+  console.error(err);
+  document.querySelector('.wrap').insertAdjacentHTML(
+    'beforeend',
+    `
     <section><h2>Could not load data</h2>
-    <p class="sub">${err.message}. Serve the folder over HTTP (GitHub Pages or <code>python -m http.server</code>).</p></section>`);
+    <p class="sub">${err.message}. Serve the folder over HTTP (GitHub Pages or <code>python -m http.server</code>).</p></section>`,
+  );
 });

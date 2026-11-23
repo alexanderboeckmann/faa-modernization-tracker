@@ -5,7 +5,8 @@
       "era": "NextGen",
       "kind": "program",
       "text": "NextGen implementation begins",
-      "src": "oig_travelweekly"
+      "src": "oig_travelweekly",
+      "precision": "year"
     },
     {
       "date": "2008-12-15",
@@ -22,11 +23,12 @@
       "src": "faa_nextgen_acc"
     },
     {
-      "date": "2014-06-30",
+      "date": "2014-01-01",
       "era": "NextGen",
       "kind": "deploy",
       "text": "700+ ADS-B ground stations complete",
-      "src": "faa_nextgen_acc"
+      "src": "faa_nextgen_acc",
+      "precision": "year"
     },
     {
       "date": "2015-03-31",
@@ -78,6 +80,14 @@
       "src": "faa_nextgen_fy"
     },
     {
+      "date": "2025-01-01",
+      "era": "NextGen",
+      "kind": "deploy",
+      "text": "Data Comm en route at all 20 ARTCCs",
+      "src": "faa_nextgen",
+      "precision": "year"
+    },
+    {
       "date": "2025-05-08",
       "era": "BNATCS",
       "kind": "program",
@@ -90,13 +100,6 @@
       "kind": "funding",
       "text": "$12.5B appropriated (OBBBA)",
       "src": "hklaw"
-    },
-    {
-      "date": "2025-09-30",
-      "era": "BNATCS",
-      "kind": "deploy",
-      "text": "Data Comm en route at all 20 ARTCCs",
-      "src": "faa_nextgen"
     },
     {
       "date": "2025-12-04",

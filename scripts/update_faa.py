@@ -4,10 +4,12 @@
 The tracker has no API; its figures are compiled into /assets/index-<hash>.js.
 Exit codes: 0 new snapshot, 3 unchanged, 1 failure.
 """
+
 import argparse
 import datetime as dt
 import hashlib
 import json
+import os
 import re
 import sys
 import urllib.request
@@ -15,7 +17,9 @@ from pathlib import Path
 
 SITE = "https://modernskies.faa.gov/"
 SNAPSHOTS = Path(__file__).resolve().parent.parent / "data" / "faa_snapshots.json"
-USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
+USER_AGENT = (
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
+)
 PROGRAM_KEYS = {"id", "name", "completed", "totalPlanned"}
 CLOSING = {"[": "]", "{": "}"}
 
@@ -78,7 +82,7 @@ def js_literal(source):
         c = source[i]
         if quote:
             if c == "\\":
-                out.append(source[i:i + 2])
+                out.append(source[i : i + 2])
                 i += 2
                 continue
             out.append('"' if c == quote else '\\"' if c == '"' else c)
@@ -102,7 +106,7 @@ def js_literal(source):
 
 
 def literal_at(js, start):
-    return js_literal(js[start:matching_bracket(js, start) + 1])
+    return js_literal(js[start : matching_bracket(js, start) + 1])
 
 
 def extract_programs(js):
@@ -111,7 +115,7 @@ def extract_programs(js):
     if start < 0:
         raise RuntimeError("program array not found")
     programs = literal_at(js, start)
-    if not all(PROGRAM_KEYS <= p.keys() for p in programs):
+    if not all(p.keys() >= PROGRAM_KEYS for p in programs):
         raise RuntimeError("program array has unexpected shape")
     return programs
 
@@ -124,14 +128,16 @@ def extract_headline(js):
     for item in literal_at(js, start + len("items:")):
         total = re.search(r"[Oo]f ([\d,]+)", item.get("label", ""))
         upcoming = str(item.get("upcoming", ""))
-        tiles.append({
-            "project": item.get("projectName") or item.get("label"),
-            "completed": int(str(item["val"]).replace(",", "")),
-            "total": int(total.group(1).replace(",", "")) if total else None,
-            "percent": item.get("progress"),
-            "upcomingThisMonth": int(upcoming) if upcoming.isdigit() else None,
-            "label": item.get("label"),
-        })
+        tiles.append(
+            {
+                "project": item.get("projectName") or item.get("label"),
+                "completed": int(str(item["val"]).replace(",", "")),
+                "total": int(total.group(1).replace(",", "")) if total else None,
+                "percent": item.get("progress"),
+                "upcomingThisMonth": int(upcoming) if upcoming.isdigit() else None,
+                "label": item.get("label"),
+            }
+        )
     return tiles
 
 
@@ -148,13 +154,29 @@ def build_snapshot(js, bundle_url):
     digest = hashlib.sha256(json.dumps(programs, sort_keys=True).encode()).hexdigest()[:16]
     return {
         "asOf": extract_as_of(js),
-        "capturedAt": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "capturedAt": dt.datetime.now(dt.UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "source": SITE,
         "bundle": bundle_url,
         "programsHash": digest,
         "programs": programs,
         "headline": extract_headline(js),
     }
+
+
+def change_summary(previous, snapshot):
+    before = {p["id"]: p["completed"] for p in previous["programs"]} if previous else {}
+    since = f" since {previous['asOf']}" if previous else ""
+    lines = [
+        f"### FAA tracker as of {snapshot['asOf']}{since}",
+        "",
+        "| Program | Before | Now | Change | Total |",
+        "|---|---:|---:|---:|---:|",
+    ]
+    for p in snapshot["programs"]:
+        prior = before.get(p["id"])
+        prior_cell, change = ("", "") if prior is None else (prior, f"{p['completed'] - prior:+}")
+        lines.append(f"| {p['name']} | {prior_cell} | {p['completed']} | {change} | {p['totalPlanned']} |")
+    return "\n".join(lines) + "\n"
 
 
 def fetch():
@@ -197,6 +219,9 @@ def main():
         store["snapshots"].append(snapshot)
     store["updated"] = snapshot["capturedAt"]
     SNAPSHOTS.write_text(json.dumps(store, indent=2) + "\n")
+    if summary_path := os.environ.get("GITHUB_STEP_SUMMARY"):
+        with open(summary_path, "a") as f:
+            f.write(change_summary(last, snapshot))
     print(f"wrote snapshot {snapshot['asOf']}")
     return 0
 

@@ -1,174 +1,216 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FAA Modernization Tracker</title>
-  <link rel="stylesheet" href="styles.css">
-  <script type="module" src="js/main.js"></script>
-</head>
-<body>
-<div class="viz-root">
-  <div class="wrap">
-    <header>
-      <h1>FAA modernization tracker</h1>
-      <p>The Brand New Air Traffic Control System (BNATCS) measured against its own plan and deadlines, where the money goes, the NextGen years before it, the age of what it replaces, and six peer air navigation systems.</p>
-      <div class="asof" id="asof"></div>
-      <nav>
-        <a href="#status">Phase 1 status</a>
-        <a href="#pace">Pace vs deadline</a>
-        <a href="#progress">Progress over time</a>
-        <a href="#schedule">Old vs new plan</a>
-        <a href="#money">Where the money goes</a>
-        <a href="#age">System age</a>
-        <a href="#history">Timeline</a>
-        <a href="#scores">US vs world</a>
-        <a href="#criteria">Criteria</a>
-        <a href="#gap">Gap to world class</a>
-        <a href="#countries">Country notes</a>
-        <a href="#sources">Sources</a>
-      </nav>
-    </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FAA Modernization Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <div class="viz-root">
+      <div class="wrap">
+        <header>
+          <h1>FAA modernization tracker</h1>
+          <p>
+            The Brand New Air Traffic Control System (BNATCS) measured against its own plan and deadlines, where the
+            money goes, the NextGen years before it, the age of what it replaces, and six peer air navigation systems.
+          </p>
+          <div class="asof" id="asof"></div>
+          <nav>
+            <a href="#status">Phase 1 status</a>
+            <a href="#pace">Pace vs deadline</a>
+            <a href="#progress">Progress over time</a>
+            <a href="#schedule">Old vs new plan</a>
+            <a href="#money">Where the money goes</a>
+            <a href="#age">System age</a>
+            <a href="#history">Timeline</a>
+            <a href="#scores">US vs world</a>
+            <a href="#criteria">Criteria</a>
+            <a href="#gap">Gap to world class</a>
+            <a href="#countries">Country notes</a>
+            <a href="#sources">Sources</a>
+          </nav>
+        </header>
 
-    <div class="tiles" id="tiles"></div>
+        <div class="tiles" id="tiles"></div>
 
-    <section id="status">
-      <h2>Phase 1 status by program</h2>
-      <p class="sub">Units installed against each program's total, with the FAA's plan-to-date marked. A program is ahead of plan when cumulative installs meet or exceed plan to date. Monthly pace is in the next section.</p>
-      <div class="legend">
-        <span><i class="key-dot" style="background:var(--s1)"></i>Completed</span>
-        <span><i class="key-tick"></i>FAA plan to date</span>
-        <span><i class="key-dot" style="background:var(--track)"></i>Remaining</span>
+        <section id="status">
+          <h2>Phase 1 status by program</h2>
+          <p class="sub">
+            Units installed against each program's total, with the FAA's plan-to-date marked. A program is ahead of plan
+            when cumulative installs meet or exceed plan to date. Monthly pace is in the next section. Program counts
+            come from the tracker's monthly dashboard and can trail the headline tiles by a few units.
+          </p>
+          <div class="legend">
+            <span><i class="key-dot" style="background: var(--s1)"></i>Completed</span>
+            <span><i class="key-tick"></i>FAA plan to date</span>
+            <span><i class="key-dot" style="background: var(--track)"></i>Remaining</span>
+          </div>
+          <div class="chartbox" id="statusChart"></div>
+          <details>
+            <summary>Table view</summary>
+            <div id="statusTable"></div>
+          </details>
+        </section>
+
+        <section id="pace">
+          <h2>Pace vs deadline</h2>
+          <p class="sub">
+            Units per month needed to finish by each program's BNATCS completion date, against the last reported month.
+            A program is behind pace when last month's rate is below the required rate.
+          </p>
+          <div id="paceTable"></div>
+          <p class="note">
+            One month is a noisy sample: installs arrive in batches. The projected finish assumes last month's rate
+            holds.
+          </p>
+        </section>
+
+        <section id="progress">
+          <h2>Progress over time</h2>
+          <p class="sub">
+            Percent complete from FAA and DOT statements, then monthly tracker snapshots. The dashed line is a
+            straight-line path from 0% at the BNATCS launch (May 2025) to 100% at the deadline: points above it are
+            ahead of an even pace.
+          </p>
+          <div class="legend">
+            <span><i class="key-line" style="border-color: var(--s1)"></i>Reported progress</span>
+            <span><i class="key-dash" style="border-color: var(--muted)"></i>Even pace, May 2025 to deadline</span>
+            <span><i class="key-dot" style="background: var(--s2)"></i>Deadline</span>
+          </div>
+          <div class="multiples" id="multiples"></div>
+          <p class="note" id="histNotes"></p>
+        </section>
+
+        <section id="schedule">
+          <h2>Old plan vs BNATCS plan</h2>
+          <p class="sub">
+            Completion dates before BNATCS, where a program existed, and after. Radios and voice switches moved up about
+            nine years.
+          </p>
+          <div class="legend">
+            <span><i class="key-dot" style="background: var(--other)"></i>Pre-BNATCS completion</span>
+            <span><i class="key-dot" style="background: var(--s1)"></i>BNATCS completion</span>
+          </div>
+          <div class="chartbox" id="schedChart"></div>
+          <p class="note" id="schedNote"></p>
+        </section>
+
+        <section id="money">
+          <h2>Where the money goes</h2>
+          <p class="sub">
+            How the $12.5B appropriation is split, what has been spent and asked for, the contracts awarded so far, and
+            what comparable systems cost elsewhere.
+          </p>
+
+          <h3 class="part">The $12.5B by line item</h3>
+          <div class="chartbox" id="approChart"></div>
+          <p class="note" id="approNote"></p>
+
+          <h3 class="part">Obligated, appropriated, estimated, requested</h3>
+          <div class="legend">
+            <span><i class="key-dot" style="background: var(--s1)"></i>Money in hand</span>
+            <span><i class="key-dot" style="background: var(--other)"></i>Estimate or request</span>
+          </div>
+          <div class="chartbox" id="spendChart"></div>
+          <p class="note" id="spendNote"></p>
+
+          <h3 class="part">Contracts awarded</h3>
+          <div id="contractTable"></div>
+          <p class="note">
+            Ceiling values are maximums over the contract life, not money spent. Per-unit figures divide the contract
+            value by planned units.
+          </p>
+
+          <h3 class="part">Comparable costs</h3>
+          <div class="legend">
+            <span><i class="key-dot" style="background: var(--s1)"></i>United States</span>
+            <span><i class="key-dot" style="background: var(--s3)"></i>Peer</span>
+          </div>
+          <div class="chartbox" id="compChart"></div>
+          <p class="note" id="compNote"></p>
+        </section>
+
+        <section id="age">
+          <h2>How old is it</h2>
+          <p class="sub">
+            Age in 2026 of the buildings and systems BNATCS touches, against design life where one is published. The dot
+            is the expected age at the end of 2028 if phase 1 lands on plan.
+          </p>
+          <div class="legend">
+            <span><i class="key-dot" style="background: var(--s2)"></i>Age in 2026 (range)</span>
+            <span><i class="key-tick"></i>Design life</span>
+            <span><i class="key-dot" style="background: var(--s1)"></i>Expected age end of 2028</span>
+          </div>
+          <div class="chartbox" id="ageChart"></div>
+          <ul class="facts" id="ageFacts"></ul>
+          <h3 class="part">Core automation in service, by country</h3>
+          <div id="coreAuto"></div>
+        </section>
+
+        <section id="history">
+          <h2>Timeline, 2007 to 2037</h2>
+          <p class="sub">
+            NextGen deployments, failures, audits and funding, then BNATCS and its planned dates. The last row is the
+            pre-BNATCS plan that BNATCS replaced.
+          </p>
+          <div class="row" id="kindFilter"></div>
+          <div class="timeline" id="timeline"></div>
+        </section>
+
+        <section id="scores">
+          <h2>US vs peers, 2007 to 2032</h2>
+          <p class="sub">
+            Modernization index, 0 to 100: ten criteria scored 0 to 5. World class is the best score any peer reached on
+            each criterion that year. Values after the current year are projections. These are editorial estimates built
+            from the evidence in the country notes, not official ratings.
+          </p>
+          <div class="row" id="countryChips"></div>
+          <div class="legend" id="scoreLegend"></div>
+          <div class="chartbox" id="scoreChart"></div>
+          <details>
+            <summary>Table view</summary>
+            <div id="scoreTable"></div>
+          </details>
+        </section>
+
+        <section id="criteria">
+          <h2>Criteria by country</h2>
+          <p class="sub">
+            Score per criterion for the chosen year. Darker is better. Hover a cell for what a 5 looks like.
+          </p>
+          <div class="row">
+            <label for="yearSlider" class="m">Year</label>
+            <input type="range" id="yearSlider" min="0" step="1" />
+            <span class="yearval" id="yearVal"></span>
+          </div>
+          <div class="chartbox" id="heatChart"></div>
+        </section>
+
+        <section id="gap">
+          <h2>US gap to world class</h2>
+          <p class="sub">
+            Where the US started, where it sits now, where phase 1 takes it by 2028, and today's world-class frontier on
+            each criterion.
+          </p>
+          <div class="legend" id="gapLegend"></div>
+          <div class="chartbox" id="gapChart"></div>
+        </section>
+
+        <section id="countries">
+          <h2>Country notes</h2>
+          <p class="sub">The evidence behind the scores.</p>
+          <div class="cards" id="cards"></div>
+        </section>
+
+        <section id="sources">
+          <h2>Sources and method</h2>
+          <p class="sub" id="method"></p>
+          <ol class="sources" id="srcList"></ol>
+        </section>
       </div>
-      <div class="chartbox" id="statusChart"></div>
-      <details><summary>Table view</summary><div id="statusTable"></div></details>
-    </section>
-
-    <section id="pace">
-      <h2>Pace vs deadline</h2>
-      <p class="sub">Units per month needed to finish by each program's BNATCS completion date, against the last reported month. A program is behind pace when last month's rate is below the required rate.</p>
-      <div id="paceTable"></div>
-      <p class="note">One month is a noisy sample: installs arrive in batches. The projected finish assumes last month's rate holds.</p>
-    </section>
-
-    <section id="progress">
-      <h2>Progress over time</h2>
-      <p class="sub">Percent complete from FAA and DOT statements, then monthly tracker snapshots. The dashed line is a straight-line path from 0% at the BNATCS launch (May 2025) to 100% at the deadline: points above it are ahead of an even pace.</p>
-      <div class="legend">
-        <span><i class="key-line" style="border-color:var(--s1)"></i>Reported progress</span>
-        <span><i class="key-dash" style="border-color:var(--muted)"></i>Even pace, May 2025 to deadline</span>
-        <span><i class="key-dot" style="background:var(--s2)"></i>Deadline</span>
-      </div>
-      <div class="multiples" id="multiples"></div>
-      <p class="note" id="histNotes"></p>
-    </section>
-
-    <section id="schedule">
-      <h2>Old plan vs BNATCS plan</h2>
-      <p class="sub">Completion dates before BNATCS, where a program existed, and after. Radios and voice switches moved up about nine years.</p>
-      <div class="legend">
-        <span><i class="key-dot" style="background:var(--other)"></i>Pre-BNATCS completion</span>
-        <span><i class="key-dot" style="background:var(--s1)"></i>BNATCS completion</span>
-      </div>
-      <div class="chartbox" id="schedChart"></div>
-      <p class="note" id="schedNote"></p>
-    </section>
-
-    <section id="money">
-      <h2>Where the money goes</h2>
-      <p class="sub">How the $12.5B appropriation is split, what has been spent and asked for, the contracts awarded so far, and what comparable systems cost elsewhere.</p>
-
-      <h3 class="part">The $12.5B by line item</h3>
-      <div class="chartbox" id="approChart"></div>
-      <p class="note" id="approNote"></p>
-
-      <h3 class="part">Obligated, appropriated, estimated, requested</h3>
-      <div class="legend">
-        <span><i class="key-dot" style="background:var(--s1)"></i>Money in hand</span>
-        <span><i class="key-dot" style="background:var(--other)"></i>Estimate or request</span>
-      </div>
-      <div class="chartbox" id="spendChart"></div>
-      <p class="note" id="spendNote"></p>
-
-      <h3 class="part">Contracts awarded</h3>
-      <div id="contractTable"></div>
-      <p class="note">Ceiling values are maximums over the contract life, not money spent. Per-unit figures divide the contract value by planned units.</p>
-
-      <h3 class="part">Comparable costs</h3>
-      <div class="legend">
-        <span><i class="key-dot" style="background:var(--s1)"></i>United States</span>
-        <span><i class="key-dot" style="background:var(--s3)"></i>Peer</span>
-      </div>
-      <div class="chartbox" id="compChart"></div>
-      <p class="note" id="compNote"></p>
-    </section>
-
-    <section id="age">
-      <h2>How old is it</h2>
-      <p class="sub">Age in 2026 of the buildings and systems BNATCS touches, against design life where one is published. The dot is the expected age at the end of 2028 if phase 1 lands on plan.</p>
-      <div class="legend">
-        <span><i class="key-dot" style="background:var(--s2)"></i>Age in 2026 (range)</span>
-        <span><i class="key-tick"></i>Design life</span>
-        <span><i class="key-dot" style="background:var(--s1)"></i>Expected age end of 2028</span>
-      </div>
-      <div class="chartbox" id="ageChart"></div>
-      <ul class="facts" id="ageFacts"></ul>
-      <h3 class="part">Core automation in service, by country</h3>
-      <div id="coreAuto"></div>
-    </section>
-
-    <section id="history">
-      <h2>Timeline, 2007 to 2037</h2>
-      <p class="sub">NextGen deployments, failures, audits and funding, then BNATCS and its planned dates. The last row is the pre-BNATCS plan that BNATCS replaced.</p>
-      <div class="row" id="kindFilter"></div>
-      <div class="timeline" id="timeline"></div>
-    </section>
-
-    <section id="scores">
-      <h2>US vs peers, 2007 to 2032</h2>
-      <p class="sub">Modernization index, 0 to 100: ten criteria scored 0 to 5. World class is the best score any peer reached on each criterion that year. Values after 2026 are projections. These are editorial estimates built from the evidence in the country notes, not official ratings.</p>
-      <div class="row" id="countryChips"></div>
-      <div class="legend" id="scoreLegend"></div>
-      <div class="chartbox" id="scoreChart"></div>
-      <details><summary>Table view</summary><div id="scoreTable"></div></details>
-    </section>
-
-    <section id="criteria">
-      <h2>Criteria by country</h2>
-      <p class="sub">Score per criterion for the chosen year. Darker is better. Hover a cell for what a 5 looks like.</p>
-      <div class="row">
-        <label for="yearSlider" class="m">Year</label>
-        <input type="range" id="yearSlider" min="0" step="1">
-        <span class="yearval" id="yearVal"></span>
-      </div>
-      <div class="chartbox" id="heatChart"></div>
-    </section>
-
-    <section id="gap">
-      <h2>US gap to world class</h2>
-      <p class="sub">Where the US sat in 2007 and sits now, where phase 1 takes it by 2028, and the 2026 world-class frontier on each criterion.</p>
-      <div class="legend">
-        <span><i class="key-dot" style="background:var(--seq-2)"></i>US 2007</span>
-        <span><i class="key-dot" style="background:var(--s1)"></i>US 2026</span>
-        <span><i class="key-dot" style="background:var(--seq-7)"></i>US 2028 (plan)</span>
-        <span><i class="key-diamond" style="background:var(--s2)"></i>World class 2026</span>
-      </div>
-      <div class="chartbox" id="gapChart"></div>
-    </section>
-
-    <section id="countries">
-      <h2>Country notes</h2>
-      <p class="sub">The evidence behind the scores.</p>
-      <div class="cards" id="cards"></div>
-    </section>
-
-    <section id="sources">
-      <h2>Sources and method</h2>
-      <p class="sub" id="method"></p>
-      <ol class="sources" id="srcList"></ol>
-    </section>
-  </div>
-  <div class="tip" id="tip"></div>
-</div>
-</body>
+      <div class="tip" id="tip"></div>
+    </div>
+  </body>
 </html>

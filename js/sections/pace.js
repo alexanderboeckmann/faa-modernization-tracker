@@ -14,7 +14,9 @@ export function render({ snapshot, deadlines, cite }) {
   $('paceTable').innerHTML = `<table>
     <tr><th>Program</th><th>Deadline</th><th class="n">Remaining</th><th class="n">Needed / month</th><th></th>
       <th class="n">Last month</th><th></th><th class="n">FAA plan last month</th><th>Finish at last month's rate</th><th>Status</th></tr>
-    ${rows.map(r => `<tr>
+    ${rows
+      .map(
+        r => `<tr>
       <td>${r.p.name}</td>
       <td class="nw">${fmtDate(r.deadline.new)}${r.deadline.assumed ? '*' : ''}</td>
       <td class="n">${fmt(r.remaining)}</td>
@@ -22,7 +24,9 @@ export function render({ snapshot, deadlines, cite }) {
       <td class="n">${fmt(r.actual)}</td><td>${meter(r.actual, max, 'var(--s1)')}</td>
       <td class="n">${fmt(r.p.monthPlan)}</td>
       <td class="nw">${r.finish ? fmtMonth(r.finish) : 'None last month'}</td>
-      <td>${statusBadge(r.onPace, 'On pace', 'Behind pace')}</td></tr>`).join('')}
+      <td>${statusBadge(r.onPace, 'On pace', 'Behind pace')}</td></tr>`,
+      )
+      .join('')}
   </table>
   <p class="note">Deadlines from GAO-26-107992 ${cite('gao26')}. * No program-specific date published; phase 1 end assumed.</p>`;
 }

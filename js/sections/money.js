@@ -24,16 +24,36 @@ function drawAppropriation(costs, cite) {
     const y = top + i * rowH;
     const unitCost = l.units ? `${perUnit(l.billions * 1000, l.units)} per ${l.per}` : '';
     text(root, 0, y + 15, l.label, 'lbl');
-    svg('path', { d: barPath(labelW, y + 6, Math.max((l.billions / max) * pw, 4), 14), fill: l.derived ? 'var(--other)' : 'var(--s1)' }, root);
-    text(root, labelW + (l.billions / max) * pw + 8, y + 17, `${money(l.billions)} · ${((l.billions / costs.appropriation.total) * 100).toFixed(1)}%`, 'lbl');
+    svg(
+      'path',
+      {
+        d: barPath(labelW, y + 6, Math.max((l.billions / max) * pw, 4), 14),
+        fill: l.derived ? 'var(--other)' : 'var(--s1)',
+      },
+      root,
+    );
+    text(
+      root,
+      labelW + (l.billions / max) * pw + 8,
+      y + 17,
+      `${money(l.billions)} · ${((l.billions / costs.appropriation.total) * 100).toFixed(1)}%`,
+      'lbl',
+    );
     if (unitCost) text(root, width, y + 17, unitCost, 'lbl2', 'end');
-    hitRow(root, y, width, rowH, `<b>${l.label}</b><br>${money(l.billions)} of $${costs.appropriation.total}B
+    hitRow(
+      root,
+      y,
+      width,
+      rowH,
+      `<b>${l.label}</b><br>${money(l.billions)} of $${costs.appropriation.total}B
       ${l.units ? `<br>${fmt(l.units)} ${l.unit}: ${unitCost}<br><span class="m">Appropriation divided by planned units, not a contract price</span>` : ''}
-      ${l.derived ? '<br><span class="m">Remainder of the $12.5B after the itemized lines</span>' : ''}`);
+      ${l.derived ? '<br><span class="m">Remainder of the $12.5B after the itemized lines</span>' : ''}`,
+    );
   });
 
   const srcIds = [...new Set([costs.appropriation.src, ...lines.map(l => l.src).filter(Boolean)])];
-  $('approNote').innerHTML = `Per-unit figures divide the appropriation by planned units; they include installation, sites and support, not hardware alone. ${srcIds.map(cite).join(' ')}`;
+  $('approNote').innerHTML =
+    `Per-unit figures divide the appropriation by planned units; they include installation, sites and support, not hardware alone. ${srcIds.map(cite).join(' ')}`;
 }
 
 function drawSpending(costs, cite) {
@@ -50,26 +70,44 @@ function drawSpending(costs, cite) {
   rows.forEach((r, i) => {
     const y = i * rowH;
     text(root, 0, y + 15, r.label, 'lbl');
-    svg('path', { d: barPath(labelW, y + 6, Math.max((r.billions / max) * pw, 4), 14), fill: inHand(r) ? 'var(--s1)' : 'var(--other)' }, root);
+    svg(
+      'path',
+      {
+        d: barPath(labelW, y + 6, Math.max((r.billions / max) * pw, 4), 14),
+        fill: inHand(r) ? 'var(--s1)' : 'var(--other)',
+      },
+      root,
+    );
     text(root, labelW + (r.billions / max) * pw + 8, y + 17, money(r.billions), 'lbl');
-    hitRow(root, y, width, rowH, `<b>${r.label}</b><br>${money(r.billions)}<br><span class="m">${inHand(r) ? 'Money in hand' : 'Estimate or request'}</span>`);
+    hitRow(
+      root,
+      y,
+      width,
+      rowH,
+      `<b>${r.label}</b><br>${money(r.billions)}<br><span class="m">${inHand(r) ? 'Money in hand' : 'Estimate or request'}</span>`,
+    );
   });
   $('spendNote').innerHTML = `Sources: ${[...new Set(rows.map(r => r.src))].map(cite).join(' ')}`;
 }
 
 function renderContracts(costs, cite) {
   const max = Math.max(...costs.contracts.map(c => c.millions));
-  const meter = v => `<svg width="110" height="10" aria-hidden="true"><rect y="1" width="110" height="8" rx="4" fill="var(--track)"/><rect y="1" width="${Math.max((v / max) * 110, 3)}" height="8" rx="4" fill="var(--s1)"/></svg>`;
+  const meter = v =>
+    `<svg width="110" height="10" aria-hidden="true"><rect y="1" width="110" height="8" rx="4" fill="var(--track)"/><rect y="1" width="${Math.max((v / max) * 110, 3)}" height="8" rx="4" fill="var(--s1)"/></svg>`;
   const qualifier = c => (c.ceiling ? 'up to ' : c.initial ? 'initial ' : '');
 
   $('contractTable').innerHTML = `<table>
     <tr><th>Vendor</th><th>Program</th><th>Awarded</th><th class="n">Value</th><th></th><th class="n">Units</th><th class="n">Per unit</th><th>Notes</th></tr>
-    ${costs.contracts.map(c => `<tr>
+    ${costs.contracts
+      .map(
+        c => `<tr>
       <td>${c.vendor}</td><td>${c.program}</td><td class="nw">${fmtMonth(c.awarded)}</td>
       <td class="n nw">${qualifier(c)}${money(c.millions / 1000)} ${cite(c.src)}</td><td>${meter(c.millions)}</td>
       <td class="n">${c.units ? fmt(c.units) : ''}</td>
       <td class="n nw">${c.units ? `${c.ceiling ? '≤ ' : ''}${perUnit(c.millions, c.units)}` : ''}</td>
-      <td class="m">${c.note ?? ''} ${c.noteSrc ? cite(c.noteSrc) : ''}</td></tr>`).join('')}
+      <td class="m">${c.note ?? ''} ${c.noteSrc ? cite(c.noteSrc) : ''}</td></tr>`,
+      )
+      .join('')}
   </table>`;
 }
 
@@ -98,20 +136,43 @@ function drawComparables(costs, countries, cite) {
   groups.forEach(g => {
     text(root, 0, y + 15, g, 'lbl2', 'start', { 'font-weight': 600 });
     y += headH;
-    rows.filter(r => r.group === g).sort((a, b) => b.usd - a.usd).forEach(r => {
-      const cy = y + rowH / 2;
-      text(root, 0, cy + 4, `${name[r.country]}: ${r.item}`, 'lbl');
-      svg('line', { x1: labelW, x2: sx(r.usd), y1: cy, y2: cy, stroke: 'var(--grid)', 'stroke-width': 2 }, root);
-      svg('circle', { cx: sx(r.usd), cy, r: 5, fill: r.country === 'us' ? 'var(--s1)' : 'var(--s3)', stroke: 'var(--surface-1)', 'stroke-width': 2 }, root);
-      text(root, sx(r.usd) + 10, cy + 4, `≈${money(r.usd)}`, 'lbl2');
-      const local = r.currency === 'USD' ? '' : `<br>${r.currency} ${fmt(r.local)}M at ${costs.fx[r.currency]} USD`;
-      hitRow(root, y, width, rowH, `<b>${r.item}</b><br>≈${money(r.usd)} USD${local}${r.note ? `<br><span class="m">${r.note}</span>` : ''}`);
-      y += rowH;
-    });
+    rows
+      .filter(r => r.group === g)
+      .sort((a, b) => b.usd - a.usd)
+      .forEach(r => {
+        const cy = y + rowH / 2;
+        text(root, 0, cy + 4, `${name[r.country]}: ${r.item}`, 'lbl');
+        svg('line', { x1: labelW, x2: sx(r.usd), y1: cy, y2: cy, stroke: 'var(--grid)', 'stroke-width': 2 }, root);
+        svg(
+          'circle',
+          {
+            cx: sx(r.usd),
+            cy,
+            r: 5,
+            fill: r.country === 'us' ? 'var(--s1)' : 'var(--s3)',
+            stroke: 'var(--surface-1)',
+            'stroke-width': 2,
+          },
+          root,
+        );
+        text(root, sx(r.usd) + 10, cy + 4, `≈${money(r.usd)}`, 'lbl2');
+        const local = r.currency === 'USD' ? '' : `<br>${r.currency} ${fmt(r.local)}M at ${costs.fx[r.currency]} USD`;
+        hitRow(
+          root,
+          y,
+          width,
+          rowH,
+          `<b>${r.item}</b><br>≈${money(r.usd)} USD${local}${r.note ? `<br><span class="m">${r.note}</span>` : ''}`,
+        );
+        y += rowH;
+      });
   });
 
   const ids = [...new Set(rows.flatMap(r => [r.src, r.noteSrc]).filter(Boolean))];
-  $('compNote').innerHTML = `${costs.fx.note}. Notes: ${rows.filter(r => r.note).map(r => `${r.item}: ${r.note}`).join('; ')}. ${ids.map(cite).join(' ')}`;
+  $('compNote').innerHTML = `${costs.fx.note}. Notes: ${rows
+    .filter(r => r.note)
+    .map(r => `${r.item}: ${r.note}`)
+    .join('; ')}. ${ids.map(cite).join(' ')}`;
 }
 
 export function render({ data, cite }) {

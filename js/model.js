@@ -9,13 +9,18 @@ export function deriveScores(sc) {
   const years = sc.years.map((_, i) => i);
 
   const index = Object.fromEntries(Object.keys(sc.scores).map(c => [c, years.map(i => toIndex(at(c, i)))]));
-  const frontier = years.map(i => Object.fromEntries(ids.map(k => [k, Math.max(...Object.keys(sc.scores).map(c => sc.scores[c][k][i]))])));
+  const frontier = years.map(i =>
+    Object.fromEntries(ids.map(k => [k, Math.max(...Object.keys(sc.scores).map(c => sc.scores[c][k][i]))])),
+  );
 
   return {
     index,
     frontier,
     frontierIndex: frontier.map(f => toIndex(Object.values(f))),
     usUnfunded2032: toIndex(Object.values(sc.us2032Unfunded)),
+    years: sc.years,
+    baseYear: sc.baseYear,
+    baseIndex: sc.years.indexOf(sc.baseYear),
     yearIndex: year => sc.years.indexOf(year),
   };
 }

@@ -20,6 +20,7 @@ js/sections/*.js           one module per page section
 data/*.json                all content
 scripts/update_faa.py      monthly tracker snapshot
 scripts/validate_data.py   data checks
+scripts/check_render.py    headless render check, light and dark
 tests/fixture_bundle.js    saved tracker bundle for offline parser tests
 ```
 
@@ -36,20 +37,38 @@ tests/fixture_bundle.js    saved tracker bundle for offline parser tests
 | `scores.json` | 7 countries x 10 criteria x 8 years, with evidence | By hand |
 | `sources.json` | Every source id referenced above | By hand |
 
-Run `python scripts/validate_data.py` after editing. It checks score ranges, that
-appropriation lines sum to the total, that every tracker program has a deadline, and
-that every `src` resolves.
+Run `python scripts/validate_data.py` after editing. It checks score ranges, date
+formats, that history points are ordered and never decrease, that appropriation lines
+sum to the total, that every tracker program has a deadline, and that every source is
+both defined and cited.
 
 Scores are editorial estimates, not official ratings. Each criterion has a written
 definition of a 5 (`criteria[].five`).
+
+## Checks
+
+`.github/workflows/ci.yml` runs on every push and pull request: Ruff and Prettier,
+data validation, the parser test against the saved bundle, and the render check.
+Run them locally with:
+
+```
+pip install -r requirements.txt ruff==0.7.4 && python -m playwright install chromium
+ruff check scripts && ruff format --check scripts
+npx prettier@3.3.3 --check "js/**/*.js" styles.css index.html
+python scripts/validate_data.py
+python scripts/check_render.py
+```
+
+Dependabot proposes Action and pip updates monthly.
 
 ## Monthly updates
 
 `.github/workflows/monthly-update.yml` runs on the 17th of each month and on demand.
 `update_faa.py` finds the tracker's JS bundle, parses the program array, headline tiles
-and as-of date, and appends a snapshot when anything changed. The site sits behind bot
-protection, so the script falls back to headless Chromium. If both fail, the workflow
-opens an issue.
+and as-of date, and appends a snapshot when anything changed. The new data must pass validation and the
+render check before it is committed, and the run summary lists each program's change
+since the previous snapshot. The site sits behind bot protection, so the script falls
+back to headless Chromium. Any failure opens an issue.
 
 ```
 python scripts/update_faa.py --bundle tests/fixture_bundle.js --dry-run

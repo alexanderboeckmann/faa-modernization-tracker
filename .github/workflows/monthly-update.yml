@@ -9,6 +9,10 @@ permissions:
   contents: write
   issues: write
 
+concurrency:
+  group: monthly-snapshot
+  cancel-in-progress: false
+
 jobs:
   snapshot:
     runs-on: ubuntu-latest
@@ -18,16 +22,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
 
-      - name: Install Playwright
+      - name: Install
         run: |
-          pip install playwright==1.48.0
+          pip install -r requirements.txt
           python -m playwright install --with-deps chromium
-
-      - name: Self-test
-        run: |
-          python scripts/validate_data.py
-          python scripts/update_faa.py --bundle tests/fixture_bundle.js --dry-run || [ $? -eq 3 ]
 
       - name: Pull tracker
         id: pull
@@ -36,23 +36,29 @@ jobs:
           python scripts/update_faa.py
           code=$?
           echo "code=$code" >> "$GITHUB_OUTPUT"
-          if [ "$code" = "1" ]; then exit 1; fi
-          exit 0
+          [ "$code" != "1" ]
 
-      - name: Commit new snapshot
+      - name: Check before commit
         if: steps.pull.outputs.code == '0'
         run: |
-          git config user.name  "faa-tracker-bot"
+          python scripts/validate_data.py
+          python scripts/check_render.py
+
+      - name: Commit snapshot
+        if: steps.pull.outputs.code == '0'
+        run: |
+          as_of=$(python -c "import json; print(json.load(open('data/faa_snapshots.json'))['snapshots'][-1]['asOf'])")
+          git config user.name "faa-tracker-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/faa_snapshots.json
-          git commit -m "Snapshot: FAA tracker $(python -c "import json;print(json.load(open('data/faa_snapshots.json'))['snapshots'][-1]['asOf'])")"
+          git commit -m "Snapshot: FAA tracker as of $as_of"
           git push
 
-      - name: Open an issue if the scrape broke
+      - name: Open an issue on failure
         if: failure()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh issue create \
             --title "Monthly FAA snapshot failed ($(date -u +%Y-%m-%d))" \
-            --body "The updater could not fetch or parse modernskies.faa.gov. Likely causes: the site changed its bundle layout, or bot protection blocked the runner. See run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            --body "The snapshot job failed. Likely causes: the tracker changed its bundle layout, bot protection blocked the runner, or the new data broke validation or rendering. Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

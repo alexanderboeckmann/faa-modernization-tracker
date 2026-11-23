@@ -3,10 +3,6 @@
     "title": "FAA Modern Skies tracker",
     "url": "https://modernskies.faa.gov/"
   },
-  "faa_factsheet": {
-    "title": "FAA, BNATCS fact sheet (Dec 4, 2025)",
-    "url": "https://www.faa.gov/newsroom/brand-new-air-traffic-control-system-bnatcs-fact-sheet"
-  },
   "dot_factsheet_pdf": {
     "title": "DOT, BNATCS fact sheet PDF (Dec 2025)",
     "url": "https://www.transportation.gov/sites/dot.gov/files/2025-12/Brand%20News%20Air%20Traffic%20Control%20System%20Fact%20Sheet.pdf"
@@ -35,17 +31,9 @@
     "title": "GAO-26-107992, Ambitious New Modernization Effort Needs Cost and Schedule Planning (Sep 22, 2026)",
     "url": "https://files.gao.gov/reports/GAO-26-107992/index.html?pubDate=20260922"
   },
-  "gao24": {
-    "title": "GAO-24-107001, FAA Actions Are Urgently Needed to Modernize Aging Systems (Sep 23, 2024)",
-    "url": "https://gao.gov/products/GAO-24-107001"
-  },
   "register_gao24": {
     "title": "The Register on GAO-24-107001 (Sep 24, 2024)",
     "url": "https://www.theregister.com/2024/09/24/us_air_traffic_control_system_upgrade/"
-  },
-  "quecon": {
-    "title": "Quecon, FAA modernization update (FAA figures of Aug 25, 2026)",
-    "url": "https://www.quecon.com/blog-posts/faa-modernization-update-ip-voice-network-upgrades-and-nas-resiliency/"
   },
   "nbaa": {
     "title": "NBAA Business Aviation Insider, Nov 2026 (FAA figures as of Aug 2026)",
@@ -54,10 +42,6 @@
   "aopa": {
     "title": "AOPA, Bedford highlights ATC overhaul progress (Sep 17, 2026)",
     "url": "https://www.aopa.org/news-and-media/all-news/2026/september/17/bedford-highlights-atc-overhaul-progress-urges-continued-funding"
-  },
-  "govmarket": {
-    "title": "Government Market News (Bedford figures as of Sep 1, 2026)",
-    "url": "https://govmarketnews.com/faa-air-traffic-control-modernization-projects/"
   },
   "avweb_peraton": {
     "title": "AvWeb, FAA reportedly frustrated with ATC overhaul contractor (2026)",
@@ -91,14 +75,6 @@
     "title": "DOT OIG AV-2009-012, Management and Maintenance of ATC Facilities (Dec 15, 2008)",
     "url": "https://webarchive.library.unt.edu/web/20130215164824/http://www.oig.dot.gov/library-item/4821"
   },
-  "oig2012": {
-    "title": "DOT OIG facilities consolidation report (Jul 2012)",
-    "url": "https://webarchive.library.unt.edu/web/20161101114431/https://www.oig.dot.gov/sites/default/files/Facilities%20Consolidation%20Report%5E7-17-12.pdf"
-  },
-  "caas_lorads": {
-    "title": "CAAS, ATM systems and technology (LORADS)",
-    "url": "https://www.caas.gov.sg/industry/airspace-management-and-aerial-activities/air-traffic-services/air-traffic-management-systems-and-technology/"
-  },
   "icao_lorads": {
     "title": "ICAO APAC, Singapore LORADS III transition (2018)",
     "url": "https://icao.int/APAC/Meetings/2018 ATMASS/SP202 - Singapore_LORADS III transition_2018_11_22.pdf"
@@ -110,10 +86,6 @@
   "jcab_kobe": {
     "title": "JCAB, Setting up Kobe ACC / TEPS",
     "url": "https://www.mlit.go.jp/en/koku/koku_fr13_000026.html"
-  },
-  "jcab_reorg": {
-    "title": "JCAB, domestic airspace reorganization",
-    "url": "https://www.mlit.go.jp/en/koku/koku_fr13_000033.html"
   },
   "icao_jpn_reorg": {
     "title": "ICAO APAC WP17, Japan airspace restructuring (2025)",
@@ -130,10 +102,6 @@
   "dfs_munich": {
     "title": "DFS, iCAS takes over at Munich (Mar 30, 2023)",
     "url": "https://dfs.de/homepage/en/media/press/2023/30-03-2023-the-next-system-generation-takes-over-at-the-dfs-control-centre-in-munich/"
-  },
-  "sdm_icas": {
-    "title": "SESAR Deployment Manager, iCAS deployment project",
-    "url": "https://sesardeploymentmanager.eu/projects/featured/2015_190_af3-deployment-of-air-traffic-control-system-icas-implementation-of"
   },
   "atm_icas2": {
     "title": "Air Traffic Management, iCAS II and DFS radar contract",
@@ -186,10 +154,6 @@
   "airservices_voice": {
     "title": "Airservices, CMATS voice transition milestones",
     "url": "https://airservicesaustralia.com/?p=28104"
-  },
-  "us_eu_2024": {
-    "title": "FAA/EUROCONTROL, US-Europe comparison of ANS performance (Jan 2024)",
-    "url": "https://transport.ec.europa.eu/system/files/2024-01/2024-01-US_Europe-comparison-ANS_performance.pdf"
   },
   "flightglobal_obbba": {
     "title": "FlightGlobal, Congress passes $12.5B for ATC (Jul 2025)",
@@ -254,5 +218,33 @@
   "gao_nextgen_2023": {
     "title": "GAO-24-105254, NextGen delays and challenges (Nov 2023)",
     "url": "https://www.gao.gov/assets/d24105254.pdf"
+  },
+  "aaae_dec2025": {
+    "title": "AAAE hearing report, Bedford at House Aviation (Dec 16, 2025)",
+    "url": "https://alerts.aaae.org/latest/airport_121625"
+  },
+  "dot_summit": {
+    "title": "DOT, Modern Skies Summit progress update (Apr 21, 2026)",
+    "url": "https://www.transportation.gov/briefing-room/driving-news-trumps-transportation-secretary-sean-p-duffy-hosts-first-modern-skies"
+  },
+  "dot_ewr_smr": {
+    "title": "FAA, SMR-4 installed at Newark (Aug 2026)",
+    "url": "https://faa.gov/newsroom/trumps-transportation-secretary-sean-p-duffy-unveils-brand-new-radar-latest-improvement"
+  },
+  "dot_plant": {
+    "title": "DOT, voice switch plant opening and progress (Aug 25, 2026)",
+    "url": "https://www.transportation.gov/briefing-room/trumps-transportation-secretary-duffy-faa-administrator-bedford-celebrate-opening-key"
+  },
+  "faa_testimony_sep2026": {
+    "title": "FAA, Bedford testimony to House Appropriations (data as of Sep 1, 2026)",
+    "url": "https://www.faa.gov/testimony/testimony-bryan-bedford-faa-administrator-hearing-committee-appropriations-subcommittee"
+  },
+  "dot_eids": {
+    "title": "DOT, E-IDS replaces floppy disks, progress update (Nov 5, 2026)",
+    "url": "https://www.transportation.gov/briefing-room/trumps-transportation-secretary-sean-p-duffy-begins-retiring-decades-old-floppy-disks"
+  },
+  "avweb_16b": {
+    "title": "AvWeb, Bedford: phase one will cost $16 billion (Sep 2026)",
+    "url": "https://avweb.com/aviation-news/bedford-phase-1-atc-overhaul-16-billion/"
   }
 }

@@ -90,6 +90,11 @@
       "src": "gao26"
     },
     {
+      "label": "Phase 1 cost per Bedford (Sep 2026)",
+      "billions": 16.0,
+      "src": "avweb_16b"
+    },
+    {
       "label": "Phase 2 estimate (unfunded)",
       "billions": 10.2,
       "src": "gao26"
